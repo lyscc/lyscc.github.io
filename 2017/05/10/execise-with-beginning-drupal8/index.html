@@ -93,7 +93,7 @@
 <meta name="description" content="5个月前，完全不了解drupal时，跟随者《beginning drupal8.pdf》，经过两遍折腾，实现了书中的例子。2个月前，开始通读drupal.org上的大部分文档及Acquia上的部分文档后，于近期完成。最近这两天感觉遇到了瓶颈，没有了前进的方向。直到昨天读到了 Drupal First Time User Guide - Drupal Learning Curve in One Pa">
 <meta name="keywords" content="drupal8">
 <meta property="og:type" content="article">
-<meta property="og:title" content="创建公司网站">
+<meta property="og:title" content="创建公司类型网站">
 <meta property="og:url" content="http://yoursite.com/2017/05/10/execise-with-beginning-drupal8/index.html">
 <meta property="og:site_name" content="Ly&#39;s cheat sheet">
 <meta property="og:description" content="5个月前，完全不了解drupal时，跟随者《beginning drupal8.pdf》，经过两遍折腾，实现了书中的例子。2个月前，开始通读drupal.org上的大部分文档及Acquia上的部分文档后，于近期完成。最近这两天感觉遇到了瓶颈，没有了前进的方向。直到昨天读到了 Drupal First Time User Guide - Drupal Learning Curve in One Pa">
@@ -101,9 +101,9 @@
 <meta property="og:image" content="http://yoursite.com/2017/05/10/execise-with-beginning-drupal8/client%20portfolio.jpg">
 <meta property="og:image" content="http://yoursite.com/2017/05/10/execise-with-beginning-drupal8/key%20staff.jpg">
 <meta property="og:image" content="http://yoursite.com/2017/05/10/execise-with-beginning-drupal8/site%20footer.jpg">
-<meta property="og:updated_time" content="2017-05-10T06:55:35.085Z">
+<meta property="og:updated_time" content="2017-05-11T01:36:11.706Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="创建公司网站">
+<meta name="twitter:title" content="创建公司类型网站">
 <meta name="twitter:description" content="5个月前，完全不了解drupal时，跟随者《beginning drupal8.pdf》，经过两遍折腾，实现了书中的例子。2个月前，开始通读drupal.org上的大部分文档及Acquia上的部分文档后，于近期完成。最近这两天感觉遇到了瓶颈，没有了前进的方向。直到昨天读到了 Drupal First Time User Guide - Drupal Learning Curve in One Pa">
 <meta name="twitter:image" content="http://yoursite.com/2017/05/10/execise-with-beginning-drupal8/last%20news.jpg">
 
@@ -139,7 +139,7 @@
 
 
 
-  <title>创建公司网站 | Ly's cheat sheet</title>
+  <title>创建公司类型网站 | Ly's cheat sheet</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">创建公司网站</h1>
+          <h1 class="post-title" itemprop="name headline">创建公司类型网站</h1>
         
 
         <div class="post-meta">
@@ -382,6 +382,7 @@
 <img src="/2017/05/10/execise-with-beginning-drupal8/key%20staff.jpg" alt="核心员工" title="核心员工">
 <img src="/2017/05/10/execise-with-beginning-drupal8/site%20footer.jpg" alt="页脚" title="页脚">
 <h1 id="业务要求"><a href="#业务要求" class="headerlink" title="业务要求"></a>业务要求</h1><ul>
+<li>acquia free hosting</li>
 <li>gitlab管理代码</li>
 <li>多语言</li>
 <li>移动设备优先,自适应</li>
@@ -389,6 +390,9 @@
 </ul>
 <h1 id="整理要求"><a href="#整理要求" class="headerlink" title="整理要求"></a>整理要求</h1><ul>
 <li>terminology整理</li>
+</ul>
+<h1 id="使用的modules"><a href="#使用的modules" class="headerlink" title="使用的modules"></a>使用的modules</h1><ul>
+<li>views</li>
 </ul>
 
       
@@ -442,8 +446,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/10/terminology/" rel="prev" title="术语表">
-                术语表 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/10/terminology/" rel="prev" title="drupal8术语表">
+                drupal8术语表 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -516,7 +520,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -573,7 +577,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#需求"><span class="nav-number">1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#业务要求"><span class="nav-number">2.</span> <span class="nav-text">业务要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#整理要求"><span class="nav-number">3.</span> <span class="nav-text">整理要求</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#需求"><span class="nav-number">1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#业务要求"><span class="nav-number">2.</span> <span class="nav-text">业务要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#整理要求"><span class="nav-number">3.</span> <span class="nav-text">整理要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用的modules"><span class="nav-number">4.</span> <span class="nav-text">使用的modules</span></a></li></ol></div>
             
 
           </div>
