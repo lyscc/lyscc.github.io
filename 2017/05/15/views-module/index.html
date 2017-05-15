@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="drupal8,log,debug," />
+  <meta name="keywords" content="drupal8,modules," />
 
 
 
@@ -90,17 +90,21 @@
 
 
 
-<meta name="description" content="log和debug相关设置 show all errors by adding a few lines to your local testing site’s settings.php: 123error_reporting(E_ALL);ini_set(&amp;apos;display_errors&amp;apos;, TRUE);ini_set(&amp;apos;display_startup_errors&amp;">
-<meta name="keywords" content="drupal8,log,debug">
+<meta name="description" content="views模块主要用来查询网站中数据(从哪个表查询数据，用什么条件过滤，取得哪些字段),并配置以何种format(list,table)及何种dispaly(page,block)来显示这些数据。 views模块介绍views首先是一个query builder.在views editor中可以配置query及format。 views配置 Configure Views for debuggin">
+<meta name="keywords" content="drupal8,modules">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何debug，去哪找log">
-<meta property="og:url" content="http://yoursite.com/2017/05/11/log-and-debug/index.html">
+<meta property="og:title" content="views module">
+<meta property="og:url" content="http://yoursite.com/2017/05/15/views-module/index.html">
 <meta property="og:site_name" content="Ly&#39;s cheat sheet">
-<meta property="og:description" content="log和debug相关设置 show all errors by adding a few lines to your local testing site’s settings.php: 123error_reporting(E_ALL);ini_set(&amp;apos;display_errors&amp;apos;, TRUE);ini_set(&amp;apos;display_startup_errors&amp;">
-<meta property="og:updated_time" content="2017-05-15T08:17:07.293Z">
+<meta property="og:description" content="views模块主要用来查询网站中数据(从哪个表查询数据，用什么条件过滤，取得哪些字段),并配置以何种format(list,table)及何种dispaly(page,block)来显示这些数据。 views模块介绍views首先是一个query builder.在views editor中可以配置query及format。 views配置 Configure Views for debuggin">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/views-querybuilder.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/views-wizard.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/views-ui-simple.png">
+<meta property="og:updated_time" content="2017-05-15T08:08:31.906Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何debug，去哪找log">
-<meta name="twitter:description" content="log和debug相关设置 show all errors by adding a few lines to your local testing site’s settings.php: 123error_reporting(E_ALL);ini_set(&amp;apos;display_errors&amp;apos;, TRUE);ini_set(&amp;apos;display_startup_errors&amp;">
+<meta name="twitter:title" content="views module">
+<meta name="twitter:description" content="views模块主要用来查询网站中数据(从哪个表查询数据，用什么条件过滤，取得哪些字段),并配置以何种format(list,table)及何种dispaly(page,block)来显示这些数据。 views模块介绍views首先是一个query builder.在views editor中可以配置query及format。 views配置 Configure Views for debuggin">
+<meta name="twitter:image" content="http://yoursite.com/2017/05/15/views-module/views-querybuilder.png">
 
 
 
@@ -128,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/11/log-and-debug/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/15/views-module/"/>
 
 
 
 
 
-  <title>如何debug，去哪找log | Ly's cheat sheet</title>
+  <title>views module | Ly's cheat sheet</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -253,7 +257,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/11/log-and-debug/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/15/views-module/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ly">
@@ -270,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">如何debug，去哪找log</h1>
+          <h1 class="post-title" itemprop="name headline">views module</h1>
         
 
         <div class="post-meta">
@@ -282,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-11T14:56:00+08:00">
-                2017-05-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-15T15:23:23+08:00">
+                2017-05-15
               </time>
             
 
@@ -317,51 +321,18 @@
       
 
       
-        <h1 id="log和debug相关设置"><a href="#log和debug相关设置" class="headerlink" title="log和debug相关设置"></a>log和debug相关设置</h1><ul>
-<li><p>show all errors by adding a few lines to your local testing site’s settings.php:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">error_reporting(E_ALL);</div><div class="line">ini_set(&apos;display_errors&apos;, TRUE);</div><div class="line">ini_set(&apos;display_startup_errors&apos;, TRUE);</div></pre></td></tr></table></figure>
-</li>
-<li><p>navigate to Configuration &gt; DEVELOPMENT &gt; Logging and errors (admin/config/development/logging) and select “All messages”.</p>
-</li>
-<li><p>激活Debug mode<br>激活后，drupal会禁用cache,js和css聚合,修改error_log为详细级别等</p>
-<ol>
-<li><p>拷贝文件到sites/default/</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp sites/example.settings.local.php sites/default/settings.local.php</div></pre></td></tr></table></figure>
-</li>
-<li><p>放开sites/default/settings.php中以下内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">if (file_exists($app_root . &apos;/&apos; . $site_path . &apos;/settings.local.php&apos;)) &#123;</div><div class="line">   include $app_root . &apos;/&apos; . $site_path . &apos;/settings.local.php&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p><del>Switch on strict PHP error reporting</del><br><del>check through your php.ini file and set error reporting to E_ALL | E_STRICT.</del></p>
-</li>
-</ul>
-<h1 id="log"><a href="#log" class="headerlink" title="log"></a>log</h1><ol>
-<li><p>网站不能访问</p>
-<ol>
-<li><p>查看apache log</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tail -f &apos;C:\Program Files (x86)\DevDesktop\apache\logs\error.log&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>drush watch dog</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">drush wd-show --tail</div></pre></td></tr></table></figure>
-</li>
-<li><p><del>通过<a href="https://www.drupal.org/docs/8/core/modules/syslog/overview" target="_blank" rel="external">syslog module</a> 查看log</del><br><del>syslog需要关闭dblog，不适用于开发时使用</del></p>
-</li>
-</ol>
-</li>
-<li>网站可以访问<ol>
-<li>通过<a href="https://www.drupal.org/docs/8/core/modules/dblog/overview" target="_blank" rel="external">dblog module</a>查看系统事件log<br>Your site captures system events in a log to be reviewed by an authorized individual at a later time. The log is a list of recorded events containing usage data, performance data, errors, warnings, and operational information. It is vital to check the log on a regular basis as it is often the only way to tell what is going on.<br>You can find your site’s recent log messages in the Manage administrative menu by navigating to Reports &gt; Recent log messages (admin/reports/dblog).</li>
-</ol>
-</li>
-</ol>
-<h1 id="debug-tools"><a href="#debug-tools" class="headerlink" title="debug tools"></a>debug tools</h1><ol>
-<li><a href="../acquia-free-hosting/index.html#drupal8本地环境构建">phpstorm + xdebug</a><ul>
-<li><a href="https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc/related?hl=en" target="_blank" rel="external">chrome xdebug helper插件</a></li>
+        <p>views模块主要用来查询网站中数据(从哪个表查询数据，用什么条件过滤，取得哪些字段),并配置以何种format(list,table)及何种dispaly(page,block)来显示这些数据。</p>
+<h1 id="views模块介绍"><a href="#views模块介绍" class="headerlink" title="views模块介绍"></a>views模块介绍</h1><p>views首先是一个query builder.<br><img src="/2017/05/15/views-module/views-querybuilder.png" alt="query builder" title="query builder"><br>在views editor中可以配置query及format。<br><img src="/2017/05/15/views-module/views-wizard.png" alt="views wizard" title="views wizard"><br><img src="/2017/05/15/views-module/views-ui-simple.png" alt="views UI" title="views UI"></p>
+<h1 id="views配置"><a href="#views配置" class="headerlink" title="views配置"></a>views配置</h1><ul>
+<li>Configure Views for debugging<ul>
+<li>访问admin/structure/views/settings，选中[Show the SQL query]</li>
+<li>访问admin/structure/views/settings/advanced,选中[Add Views signature to all SQL queries]</li>
 </ul>
 </li>
-<li><a href="../../12/devel-module/index.html">devel module</a></li>
-</ol>
-<h1 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h1><p><a href="https://www.drupal.org/node/1056468" target="_blank" rel="external">Show all errors while developing</a><br><a href="https://www.drupal.org/docs/8/core/modules/dblog/overview" target="_blank" rel="external">Database Logging module overview</a><br><a href="https://www.drupal.org/docs/8/core/modules/syslog/overview" target="_blank" rel="external">Syslog module overview</a></p>
+<li>上线运行时停用views UI<br>views模块包括views和views UI两个模块。上线运行时需要关闭views UI功能。</li>
+</ul>
+<h1 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h1><p><a href="https://dev.acquia.com/blog/a-totally-beginner-tutorial-to-views-for-drupal-7/22/01/2016/9576" target="_blank" rel="external">A Totally Beginner Tutorial to Views for Drupal 7</a><br><a href="https://www.acquia.com/resources/webinars/views-mini-course-part-i-introduction-views" target="_blank" rel="external">Views Mini-Course, Part I: An Introduction to Views</a><br><a href="https://www.youtube.com/watch?v=8KQNC18EBwQ" target="_blank" rel="external">Views Mini-Course, Part II: Creating Flexible Views with Drupal 7</a><br><a href="https://www.slideshare.net/AcquiaInc/views-minicourse-part-iii-how-to-back-up-your-views-safely" target="_blank" rel="external">Views Mini-Course, Part III: How to Back Up Your Views Safely</a><br><a href="https://www.acquia.com/resources/webinars/tips-and-tricks-getting-most-out-views" target="_blank" rel="external">Tips and Tricks for Getting the Most Out of Views</a></p>
+<h1 id="其他资源"><a href="#其他资源" class="headerlink" title="其他资源"></a>其他资源</h1><p><a href="https://drupalize.me/blog/201606/learn-views-drupal-8" target="_blank" rel="external">Learn Views in Drupal 8</a><br><a href="https://www.acquia.com/blog/drupal-views-sql-analogy-easier-way-explain-views" target="_blank" rel="external">Views &amp; SQL Analogy - An easier way to explain Views</a><br><a href="https://www.drupal.org/docs/8/core/modules/views" target="_blank" rel="external">drupal 官网Views guide</a></p>
 
       
     </div>
@@ -393,9 +364,7 @@
           
             <a href="/tags/drupal8/" rel="tag"># drupal8</a>
           
-            <a href="/tags/log/" rel="tag"># log</a>
-          
-            <a href="/tags/debug/" rel="tag"># debug</a>
+            <a href="/tags/modules/" rel="tag"># modules</a>
           
         </div>
       
@@ -408,8 +377,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/11/acquia-free-hosting/" rel="next" title="构建drupal8开发环境及发布到web">
-                <i class="fa fa-chevron-left"></i> 构建drupal8开发环境及发布到web
+              <a href="/2017/05/12/devel-module/" rel="next" title="devel module">
+                <i class="fa fa-chevron-left"></i> devel module
               </a>
             
           </div>
@@ -417,10 +386,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/12/devel-module/" rel="prev" title="devel module">
-                devel module <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -549,7 +514,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#log和debug相关设置"><span class="nav-number">1.</span> <span class="nav-text">log和debug相关设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#log"><span class="nav-number">2.</span> <span class="nav-text">log</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#debug-tools"><span class="nav-number">3.</span> <span class="nav-text">debug tools</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资源"><span class="nav-number">4.</span> <span class="nav-text">参考资源</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#views模块介绍"><span class="nav-number">1.</span> <span class="nav-text">views模块介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#views配置"><span class="nav-number">2.</span> <span class="nav-text">views配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习资源"><span class="nav-number">3.</span> <span class="nav-text">学习资源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他资源"><span class="nav-number">4.</span> <span class="nav-text">其他资源</span></a></li></ol></div>
             
 
           </div>
