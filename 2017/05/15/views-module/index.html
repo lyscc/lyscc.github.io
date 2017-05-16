@@ -100,7 +100,15 @@
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/views-querybuilder.png">
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/views-wizard.png">
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/views-ui-simple.png">
-<meta property="og:updated_time" content="2017-05-15T08:08:31.906Z">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/step1.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/step2_1.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/step2_2.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/step3.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/step4.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/step5.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/step6.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/step7.png">
+<meta property="og:updated_time" content="2017-05-16T06:21:56.669Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="views module">
 <meta name="twitter:description" content="views模块主要用来查询网站中数据(从哪个表查询数据，用什么条件过滤，取得哪些字段),并配置以何种format(list,table)及何种dispaly(page,block)来显示这些数据。 views模块介绍views首先是一个query builder.在views editor中可以配置query及format。 views配置 Configure Views for debuggin">
@@ -331,7 +339,32 @@
 </li>
 <li>上线运行时停用views UI<br>views模块包括views和views UI两个模块。上线运行时需要关闭views UI功能。</li>
 </ul>
-<h1 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h1><p><a href="https://dev.acquia.com/blog/a-totally-beginner-tutorial-to-views-for-drupal-7/22/01/2016/9576" target="_blank" rel="external">A Totally Beginner Tutorial to Views for Drupal 7</a><br><a href="https://www.acquia.com/resources/webinars/views-mini-course-part-i-introduction-views" target="_blank" rel="external">Views Mini-Course, Part I: An Introduction to Views</a><br><a href="https://www.youtube.com/watch?v=8KQNC18EBwQ" target="_blank" rel="external">Views Mini-Course, Part II: Creating Flexible Views with Drupal 7</a><br><a href="https://www.slideshare.net/AcquiaInc/views-minicourse-part-iii-how-to-back-up-your-views-safely" target="_blank" rel="external">Views Mini-Course, Part III: How to Back Up Your Views Safely</a><br><a href="https://www.acquia.com/resources/webinars/tips-and-tricks-getting-most-out-views" target="_blank" rel="external">Tips and Tricks for Getting the Most Out of Views</a></p>
+<h1 id="views-workflow"><a href="#views-workflow" class="headerlink" title="views workflow"></a>views workflow</h1><ol>
+<li>choose what to query</li>
+<li>limit selection with filters<ul>
+<li>view modes or fields</li>
+</ul>
+</li>
+<li>select and Configure formatting</li>
+<li>choose dispalys - and/or add attachments</li>
+</ol>
+<img src="/2017/05/15/views-module/step1.png" alt="choose what to query" title="choose what to query">
+<img src="/2017/05/15/views-module/step2_1.png" alt="filters to limit selecttion" title="filters to limit selecttion">
+<img src="/2017/05/15/views-module/step2_2.png" alt="filters to limit selecttion" title="filters to limit selecttion">
+<img src="/2017/05/15/views-module/step3.png" alt="select fields" title="select fields">
+<img src="/2017/05/15/views-module/step4.png" alt="specify format" title="specify format">
+<img src="/2017/05/15/views-module/step5.png" alt="configure formatting" title="configure formatting">
+<img src="/2017/05/15/views-module/step6.png" alt="even rewrite output" title="even rewrite output">
+<img src="/2017/05/15/views-module/step7.png" alt="choose dispaly" title="choose dispaly">
+<h1 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h1><p><a href="https://dev.acquia.com/blog/a-totally-beginner-tutorial-to-views-for-drupal-7/22/01/2016/9576" target="_blank" rel="external">A Totally Beginner Tutorial to Views for Drupal 7</a><br><a href="https://www.acquia.com/resources/webinars/views-mini-course-part-i-introduction-views" target="_blank" rel="external">Views Mini-Course, Part I: An Introduction to Views</a><br><div class="video-container"><iframe src="//www.youtube.com/embed/GpCZbQyh170" frameborder="0" allowfullscreen></iframe></div><br><iframe src="//www.slideshare.net/slideshow/embed_code/key/e6Loc4mOvrP89t" width="100%" height="300" frameborder="0" allowfullscreen></iframe><br><a href="https://www.youtube.com/watch?v=8KQNC18EBwQ" target="_blank" rel="external">Views Mini-Course, Part II: Creating Flexible Views with Drupal 7</a><br><div class="video-container"><iframe src="//www.youtube.com/embed/8KQNC18EBwQ" frameborder="0" allowfullscreen></iframe></div><br><a href="https://www.slideshare.net/AcquiaInc/views-minicourse-part-iii-how-to-back-up-your-views-safely" target="_blank" rel="external">Views Mini-Course, Part III: How to Back Up Your Views Safely</a><br><div class="video-container"><iframe src="//www.youtube.com/embed/fW60VMoskpY" frameborder="0" allowfullscreen></iframe></div><br><iframe src="//www.slideshare.net/slideshow/embed_code/key/vOd1Q0iKdC2WNa" width="100%" height="300" frameborder="0" allowfullscreen></iframe><br><a href="https://www.acquia.com/resources/webinars/tips-and-tricks-getting-most-out-views" target="_blank" rel="external">Tips and Tricks for Getting the Most Out of Views</a><br><div class="video-container"><iframe src="//www.youtube.com/embed/7t-lr-_RxWA" frameborder="0" allowfullscreen></iframe></div><br><iframe src="//www.slideshare.net/slideshow/embed_code/key/LahApi3WvbhAU0" width="100%" height="300" frameborder="0" allowfullscreen></iframe></p>
+<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><ol>
+<li>Demo: Your Front Page [Views Mini-Course, Part I: An Introduction to Views]</li>
+<li>Demo: customize the view add a dispaly [Views Mini-Course, Part I: An Introduction to Views]</li>
+<li>Demo: Exposed filters [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7]</li>
+<li>Demo: attachments [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7]</li>
+<li>Demo: relationship [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7]</li>
+<li>Demo: contextual filters [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7]</li>
+</ol>
 <h1 id="其他资源"><a href="#其他资源" class="headerlink" title="其他资源"></a>其他资源</h1><p><a href="https://drupalize.me/blog/201606/learn-views-drupal-8" target="_blank" rel="external">Learn Views in Drupal 8</a><br><a href="https://www.acquia.com/blog/drupal-views-sql-analogy-easier-way-explain-views" target="_blank" rel="external">Views &amp; SQL Analogy - An easier way to explain Views</a><br><a href="https://www.drupal.org/docs/8/core/modules/views" target="_blank" rel="external">drupal 官网Views guide</a></p>
 
       
@@ -514,7 +547,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#views模块介绍"><span class="nav-number">1.</span> <span class="nav-text">views模块介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#views配置"><span class="nav-number">2.</span> <span class="nav-text">views配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习资源"><span class="nav-number">3.</span> <span class="nav-text">学习资源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他资源"><span class="nav-number">4.</span> <span class="nav-text">其他资源</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#views模块介绍"><span class="nav-number">1.</span> <span class="nav-text">views模块介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#views配置"><span class="nav-number">2.</span> <span class="nav-text">views配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#views-workflow"><span class="nav-number">3.</span> <span class="nav-text">views workflow</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习资源"><span class="nav-number">4.</span> <span class="nav-text">学习资源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#练习"><span class="nav-number">5.</span> <span class="nav-text">练习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他资源"><span class="nav-number">6.</span> <span class="nav-text">其他资源</span></a></li></ol></div>
             
 
           </div>
