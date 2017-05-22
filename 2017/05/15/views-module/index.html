@@ -113,7 +113,10 @@
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/entity_reference.png">
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/slide%20show.png">
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/slide%20show%20advance.png">
-<meta property="og:updated_time" content="2017-05-19T05:30:19.534Z">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/viewsglossary.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/ds.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/views_add_css.png">
+<meta property="og:updated_time" content="2017-05-22T07:30:57.476Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="views module">
 <meta name="twitter:description" content="views模块主要用来查询网站中数据(从哪个表查询数据，用什么条件过滤，取得哪些字段),并配置以何种format(list,table)及何种dispaly(page,block)来显示这些数据。 views模块介绍views首先是一个query builder.在views editor中可以配置query及format。 views配置 Configure Views for debuggin">
@@ -415,20 +418,35 @@
 </li>
 <li><a href="https://www.ostraining.com/blog/drupal/views-slideshow/" target="_blank" rel="external">Creating a Drupal Slideshow with Views Slideshow</a><ul>
 <li>完成功能<img src="/2017/05/15/views-module/slide%20show%20advance.png" alt="slide show advance" title="slide show advance"></li>
+<li>使用模块<br><a href="https://www.drupal.org/project/ctools" target="_blank" rel="external">Chaos tool suite (ctools)</a> 用来提高开发体验的api和工具。另外还包括一个叫page manager的模块，这里用到的应该是page manager。<br><a href="https://www.drupal.org/project/views_slideshow" target="_blank" rel="external">views_slideshow</a> 轮播模块</li>
 </ul>
 </li>
-<li><a href="https://www.ostraining.com/blog/drupal/views-user-content/" target="_blank" rel="external">Use Views to Show Content Created by Drupal Users</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/glossary/" target="_blank" rel="external">How to Create a Glossary View in Drupal</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/count-views/" target="_blank" rel="external">Count the Total Number of Results in Drupal Views</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/display-suite-views/" target="_blank" rel="external">Display Suite and Views Together in Drupal</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/manually-select-content-views/" target="_blank" rel="external">Manually Select Content for Drupal Views</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/show-drupal-users-their-own-content/" target="_blank" rel="external">Show Drupal Users Their Own Content</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/views-templates/" target="_blank" rel="external">An Intro to Drupal Views Templates and Theming</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/random/" target="_blank" rel="external">Randomly Show Drupal Content or Users in Views</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/drupal-8-entity-reference-view/" target="_blank" rel="external">Entity Reference Views is Now in the Drupal 8 Core</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/css-views/" target="_blank" rel="external">Add CSS Style to Drupal Views</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/entity-views-attach/" target="_blank" rel="external">Entity Views Attach: Use Views Almost Anywhere</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/specific-terms/" target="_blank" rel="external">Show Only Specific Levels of Taxonomy in Views</a></li>
+<li><a href="https://www.ostraining.com/blog/drupal/views-user-content/" target="_blank" rel="external">Use Views to Show Content Created by Drupal Users</a><br>expose filters</li>
+<li><a href="https://www.ostraining.com/blog/drupal/glossary/" target="_blank" rel="external">How to Create a Glossary View in Drupal</a><ul>
+<li>完成功能<img src="/2017/05/15/views-module/viewsglossary.jpg" alt="glossary" title="glossary"></li>
+</ul>
+</li>
+<li><a href="https://www.ostraining.com/blog/drupal/count-views/" target="_blank" rel="external">Count the Total Number of Results in Drupal Views</a><ul>
+<li>使用模块<br><a href="https://www.drupal.org/project/token" target="_blank" rel="external">Token</a> 提供核心不支持的token</li>
+</ul>
+</li>
+<li><a href="https://www.ostraining.com/blog/drupal/display-suite-views/" target="_blank" rel="external">Display Suite and Views Together in Drupal</a><ul>
+<li>完成功能<img src="/2017/05/15/views-module/ds.png" alt="two column" title="two column"></li>
+<li>使用模块<br><a href="https://www.drupal.org/project/ds" target="_blank" rel="external">Display Suite</a> 用来创建复杂页面，控制输出和layout</li>
+</ul>
+</li>
+<li><a href="https://www.ostraining.com/blog/drupal/manually-select-content-views/" target="_blank" rel="external">Manually Select Content for Drupal Views</a><ul>
+<li>完成功能<br>使用contextual filters来指定查询条件</li>
+</ul>
+</li>
+<li><a href="https://www.ostraining.com/blog/drupal/random/" target="_blank" rel="external">Randomly Show Drupal Content or Users in Views</a><ul>
+<li>完成功能<br>使用sort filters来随机显示内容</li>
+</ul>
+</li>
+<li><a href="https://www.ostraining.com/blog/drupal/css-views/" target="_blank" rel="external">Add CSS Style to Drupal Views</a><ul>
+<li>完成功能<img src="/2017/05/15/views-module/views_add_css.png" alt="添加css" title="添加css"></li>
+</ul>
+</li>
 <li><a href="https://www.ostraining.com/blog/drupal/delta/" target="_blank" rel="external">What Does Delta Mean in Drupal?</a></li>
 <li><a href="https://www.ostraining.com/blog/drupal/add-links-to-fields-in-views/" target="_blank" rel="external">Add Links to Fields in Views</a></li>
 <li><a href="https://www.ostraining.com/blog/drupal/popular-articles/" target="_blank" rel="external">How to Create a Popular Articles View in Drupal</a></li>

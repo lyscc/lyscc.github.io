@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/11/log-and-debug/index.html">
 <meta property="og:site_name" content="Ly&#39;s cheat sheet">
 <meta property="og:description" content="log和debug相关设置 show all errors by adding a few lines to your local testing site’s settings.php: 123error_reporting(E_ALL);ini_set(&amp;apos;display_errors&amp;apos;, TRUE);ini_set(&amp;apos;display_startup_errors&amp;">
-<meta property="og:updated_time" content="2017-05-15T08:17:07.293Z">
+<meta property="og:updated_time" content="2017-05-22T05:36:53.075Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何debug，去哪找log">
 <meta name="twitter:description" content="log和debug相关设置 show all errors by adding a few lines to your local testing site’s settings.php: 123error_reporting(E_ALL);ini_set(&amp;apos;display_errors&amp;apos;, TRUE);ini_set(&amp;apos;display_startup_errors&amp;">
@@ -333,6 +333,9 @@
 </li>
 </ol>
 </li>
+<li><p>开启Twig templates debug<br>sites/default/services.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">twig.config:</div><div class="line">  debug: true</div><div class="line">  auto_reload: true</div></pre></td></tr></table></figure>
+</li>
 <li><p><del>Switch on strict PHP error reporting</del><br><del>check through your php.ini file and set error reporting to E_ALL | E_STRICT.</del></p>
 </li>
 </ul>
@@ -361,7 +364,7 @@
 </li>
 <li><a href="../../12/devel-module/index.html">devel module</a></li>
 </ol>
-<h1 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h1><p><a href="https://www.drupal.org/node/1056468" target="_blank" rel="external">Show all errors while developing</a><br><a href="https://www.drupal.org/docs/8/core/modules/dblog/overview" target="_blank" rel="external">Database Logging module overview</a><br><a href="https://www.drupal.org/docs/8/core/modules/syslog/overview" target="_blank" rel="external">Syslog module overview</a></p>
+<h1 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h1><p><a href="https://www.drupal.org/node/1056468" target="_blank" rel="external">Show all errors while developing</a><br><a href="https://www.drupal.org/docs/8/core/modules/dblog/overview" target="_blank" rel="external">Database Logging module overview</a><br><a href="https://www.drupal.org/docs/8/core/modules/syslog/overview" target="_blank" rel="external">Syslog module overview</a><br><a href="https://www.drupal.org/node/1906392" target="_blank" rel="external">Debugging Twig templates</a></p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
       
     </div>
