@@ -108,16 +108,17 @@
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/step5.png">
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/step6.png">
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/step7.png">
-<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/conetnt-in_tabs.png">
-<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/inside-view.png">
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/entity_reference.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/inside-view.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/conetnt-in_tabs.png">
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/slide%20show.png">
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/slide%20show%20advance.png">
-<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/viewsglossary.jpg">
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/ds.png">
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/views_add_css.png">
 <meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/add_link_to_field.png">
-<meta property="og:updated_time" content="2017-05-23T08:12:32.721Z">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/calendar.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/15/views-module/viewsglossary.jpg">
+<meta property="og:updated_time" content="2017-05-25T03:13:07.325Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="views module">
 <meta name="twitter:description" content="views模块主要用来查询网站中数据(从哪个表查询数据，用什么条件过滤，取得哪些字段),并配置以何种format(list,table)及何种dispaly(page,block)来显示这些数据。 views模块介绍views首先是一个query builder.在views editor中可以配置query及format。 views配置 Configure Views for debuggin">
@@ -389,19 +390,17 @@
 <li>slideshow apache_solr calendar maps 实际网站 [Tips and Tricks for Getting the Most Out of Views]</li>
 </ol>
 </div></div>
-<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><ul>
-<li>Demo: Your Front Page [Views Mini-Course, Part I: An Introduction to Views]</li>
-<li>Demo: customize the view add a dispaly [Views Mini-Course, Part I: An Introduction to Views]</li>
+<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><h2 id="filters"><a href="#filters" class="headerlink" title="filters"></a>filters</h2><ul>
 <li>Demo: Exposed filters [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7]</li>
-<li>Demo: attachments [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7]</li>
+<li><a href="https://www.ostraining.com/blog/drupal/views-user-content/" target="_blank" rel="external">Use Views to Show Content Created by Drupal Users</a><br>expose filters</li>
 <li>Demo: relationship [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7]</li>
-<li>Demo: contextual filters [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7]</li>
-<li><a href="http://getlevelten.com/search/node/views" target="_blank" rel="external">LevelTen</a></li>
-<li><a href="https://www.drupaleasy.com/search/node?keys=views" target="_blank" rel="external">drupalesay</a></li>
-<li><a href="https://www.webwash.net/?s=views" target="_blank" rel="external">webwash</a></li>
-<li><a href="https://www.webomelette.com/search/node/views" target="_blank" rel="external">webomelette</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/drupal-8-creating-views-of-content-in-tabs/" target="_blank" rel="external">Show Drupal 8 Content in Tabs, Using Views</a><ul>
-<li>完成功能<img src="/2017/05/15/views-module/conetnt-in_tabs.png" alt="content in tabs" title="content in tabs"></li>
+<li>Demo: contextual filters [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7</li>
+<li><a href="https://www.ostraining.com/blog/drupal/manually-select-content-views/" target="_blank" rel="external">Manually Select Content for Drupal Views</a><ul>
+<li>完成功能<br>使用contextual filters来指定查询条件</li>
+</ul>
+</li>
+<li><a href="https://www.ostraining.com/blog/drupal/entity-reference-views/" target="_blank" rel="external">Using Entity Reference Fields in Drupal Views</a><ul>
+<li>完成功能<img src="/2017/05/15/views-module/entity_reference.png" alt="entity_reference" title="entity_reference"></li>
 </ul>
 </li>
 <li><a href="https://www.ostraining.com/blog/drupal/views-field-view/" target="_blank" rel="external">Drupal Views Inside Other Views</a><ul>
@@ -409,8 +408,22 @@
 <li>使用模块<br><a href="https://www.drupal.org/project/views_field_view" target="_blank" rel="external">Views Field View</a> : 连接2个view，传递参数给子view</li>
 </ul>
 </li>
-<li><a href="https://www.ostraining.com/blog/drupal/entity-reference-views/" target="_blank" rel="external">Using Entity Reference Fields in Drupal Views</a><ul>
-<li>完成功能<img src="/2017/05/15/views-module/entity_reference.png" alt="entity_reference" title="entity_reference"></li>
+<li><a href="https://www.ostraining.com/blog/drupal/random/" target="_blank" rel="external">Randomly Show Drupal Content or Users in Views</a><ul>
+<li>完成功能<br>使用sort filters来随机显示内容</li>
+</ul>
+</li>
+<li><a href="https://www.ostraining.com/blog/drupal/popular-articles/" target="_blank" rel="external">How to Create a Popular Articles View in Drupal</a><ul>
+<li>完成功能<br>按点击顺序排序文章</li>
+</ul>
+</li>
+<li><a href="https://www.ostraining.com/blog/drupal/content-child-terms/" target="_blank" rel="external">Show Drupal Content Only With Terms of Specific Depth</a><ul>
+<li>完成功能<br>显示Taxonomy子类别的内容</li>
+</ul>
+</li>
+</ul>
+<h2 id="format"><a href="#format" class="headerlink" title="format"></a>format</h2><ul>
+<li><a href="https://www.ostraining.com/blog/drupal/drupal-8-creating-views-of-content-in-tabs/" target="_blank" rel="external">Show Drupal 8 Content in Tabs, Using Views</a><ul>
+<li>完成功能<img src="/2017/05/15/views-module/conetnt-in_tabs.png" alt="content in tabs" title="content in tabs"></li>
 </ul>
 </li>
 <li><a href="https://www.ostraining.com/blog/drupal/drupal-8-slideshows/" target="_blank" rel="external">How to Build Drupal 8 Slideshows</a><ul>
@@ -422,7 +435,35 @@
 <li>使用模块<br><a href="https://www.drupal.org/project/ctools" target="_blank" rel="external">Chaos tool suite (ctools)</a> 用来提高开发体验的api和工具。另外还包括一个叫page manager的模块，这里用到的应该是page manager。<br><a href="https://www.drupal.org/project/views_slideshow" target="_blank" rel="external">views_slideshow</a> 轮播模块</li>
 </ul>
 </li>
-<li><a href="https://www.ostraining.com/blog/drupal/views-user-content/" target="_blank" rel="external">Use Views to Show Content Created by Drupal Users</a><br>expose filters</li>
+<li><a href="https://www.ostraining.com/blog/drupal/display-suite-views/" target="_blank" rel="external">Display Suite and Views Together in Drupal</a><ul>
+<li>完成功能<img src="/2017/05/15/views-module/ds.png" alt="two column" title="two column"></li>
+<li>使用模块<br><a href="https://www.drupal.org/project/ds" target="_blank" rel="external">Display Suite</a> 用来创建复杂页面，控制输出和layout</li>
+</ul>
+</li>
+<li><a href="https://www.ostraining.com/blog/drupal/css-views/" target="_blank" rel="external">Add CSS Style to Drupal Views</a><ul>
+<li>完成功能<img src="/2017/05/15/views-module/views_add_css.png" alt="添加css" title="添加css"></li>
+</ul>
+</li>
+<li><a href="https://www.ostraining.com/blog/drupal/add-links-to-fields-in-views/" target="_blank" rel="external">Add Links to Fields in Views</a><ul>
+<li>完成功能<img src="/2017/05/15/views-module/add_link_to_field.png" alt="给字段添加link" title="给字段添加link"></li>
+</ul>
+</li>
+<li><a href="https://www.ostraining.com/blog/drupal/views-taxonomy/" target="_blank" rel="external">Use Views to Control Drupal’s Taxonomy Pages</a><ul>
+<li>完成功能<br>修改drupal提供的views(点击tags terms后显示的页面)</li>
+</ul>
+</li>
+<li><a href="https://www.ostraining.com/blog/drupal/d8-calendar/" target="_blank" rel="external">How to Create a Calendar in Drupal 8</a><ul>
+<li>完成功能<img src="/2017/05/15/views-module/calendar.png" alt="日历" title="日历"></li>
+<li>使用模块<br><a href="https://www.drupal.org/project/Views_templates" target="_blank" rel="external">Views Templates</a> 提供一些复杂页面的模板<br><a href="https://www.drupal.org/project/calendar" target="_blank" rel="external">calendar</a> 日历模块</li>
+</ul>
+</li>
+</ul>
+<h2 id="dispaly"><a href="#dispaly" class="headerlink" title="dispaly"></a>dispaly</h2><ul>
+<li>Demo: attachments [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7]</li>
+</ul>
+<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><ul>
+<li>Demo: Your Front Page [Views Mini-Course, Part I: An Introduction to Views]</li>
+<li>Demo: customize the view add a dispaly [Views Mini-Course, Part I: An Introduction to Views]</li>
 <li><a href="https://www.ostraining.com/blog/drupal/glossary/" target="_blank" rel="external">How to Create a Glossary View in Drupal</a><ul>
 <li>完成功能<img src="/2017/05/15/views-module/viewsglossary.jpg" alt="glossary" title="glossary"></li>
 </ul>
@@ -431,47 +472,10 @@
 <li>使用模块<br><a href="https://www.drupal.org/project/token" target="_blank" rel="external">Token</a> 提供核心不支持的token</li>
 </ul>
 </li>
-<li><a href="https://www.ostraining.com/blog/drupal/display-suite-views/" target="_blank" rel="external">Display Suite and Views Together in Drupal</a><ul>
-<li>完成功能<img src="/2017/05/15/views-module/ds.png" alt="two column" title="two column"></li>
-<li>使用模块<br><a href="https://www.drupal.org/project/ds" target="_blank" rel="external">Display Suite</a> 用来创建复杂页面，控制输出和layout</li>
-</ul>
-</li>
-<li><a href="https://www.ostraining.com/blog/drupal/manually-select-content-views/" target="_blank" rel="external">Manually Select Content for Drupal Views</a><ul>
-<li>完成功能<br>使用contextual filters来指定查询条件</li>
-</ul>
-</li>
-<li><a href="https://www.ostraining.com/blog/drupal/random/" target="_blank" rel="external">Randomly Show Drupal Content or Users in Views</a><ul>
-<li>完成功能<br>使用sort filters来随机显示内容</li>
-</ul>
-</li>
-<li><a href="https://www.ostraining.com/blog/drupal/css-views/" target="_blank" rel="external">Add CSS Style to Drupal Views</a><ul>
-<li>完成功能<img src="/2017/05/15/views-module/views_add_css.png" alt="添加css" title="添加css"></li>
-</ul>
-</li>
 <li><a href="https://www.ostraining.com/blog/drupal/delta/" target="_blank" rel="external">What Does Delta Mean in Drupal?</a><ul>
 <li>完成功能<br>“Delta” only appears fields which have multiple value. “Delta” refers to the order of the values</li>
 </ul>
 </li>
-<li><a href="https://www.ostraining.com/blog/drupal/add-links-to-fields-in-views/" target="_blank" rel="external">Add Links to Fields in Views</a><ul>
-<li>完成功能<img src="/2017/05/15/views-module/add_link_to_field.png" alt="给字段添加link" title="给字段添加link"></li>
-</ul>
-</li>
-<li><a href="https://www.ostraining.com/blog/drupal/popular-articles/" target="_blank" rel="external">How to Create a Popular Articles View in Drupal</a><ul>
-<li>完成功能<br>按点击顺序排序文章</li>
-</ul>
-</li>
-<li><a href="https://www.ostraining.com/blog/drupal/content-child-terms/" target="_blank" rel="external">Show Drupal Content Only With Terms of Specific Depth</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/views-taxonomy/" target="_blank" rel="external">Use Views to Control Drupal’s Taxonomy Pages</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/creating-rss-feeds-in-drupal-using-views/" target="_blank" rel="external">Creating RSS Feeds in Drupal Using Views</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/alphabetical-sorting-of-drupal-nodes/" target="_blank" rel="external">Alphabetical Sorting of Drupal Nodes Using Views</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/views-php-output/" target="_blank" rel="external">How to Rewrite the Output of Views with PHP</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/views-in-panels/" target="_blank" rel="external">Use Views to Display Fields inside Panels</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/views-bulk-operations/" target="_blank" rel="external">Views Bulk Operations Makes Mass Updates Easy in Drupal</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/og-members-view/" target="_blank" rel="external">Create a View of Organic Group Members</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/track-hits/" target="_blank" rel="external">Track Hits and Show the Most Popular Drupal Content</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/d8-calendar/" target="_blank" rel="external">How to Create a Calendar in Drupal 8</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/juicebox/" target="_blank" rel="external">Create a Juicebox Image Gallery in Drupal</a></li>
-<li><a href="https://www.ostraining.com/blog/drupal/content-access/" target="_blank" rel="external">Control Who Can View Drupal Nodes: Content Access</a></li>
 </ul>
 <h1 id="其他资源"><a href="#其他资源" class="headerlink" title="其他资源"></a>其他资源</h1><p><a href="https://drupalize.me/blog/201606/learn-views-drupal-8" target="_blank" rel="external">Learn Views in Drupal 8</a><br><a href="https://www.acquia.com/blog/drupal-views-sql-analogy-easier-way-explain-views" target="_blank" rel="external">Views &amp; SQL Analogy - An easier way to explain Views</a><br><a href="https://www.drupal.org/docs/8/core/modules/views" target="_blank" rel="external">drupal 官网Views guide</a></p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
@@ -527,6 +531,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/24/atom/" rel="prev" title="atom">
+                atom <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -598,7 +606,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -620,7 +628,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -655,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#views模块介绍"><span class="nav-number">1.</span> <span class="nav-text">views模块介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#views配置"><span class="nav-number">2.</span> <span class="nav-text">views配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#views-workflow"><span class="nav-number">3.</span> <span class="nav-text">views workflow</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习资源"><span class="nav-number">4.</span> <span class="nav-text">学习资源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#练习"><span class="nav-number">5.</span> <span class="nav-text">练习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他资源"><span class="nav-number">6.</span> <span class="nav-text">其他资源</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#views模块介绍"><span class="nav-number">1.</span> <span class="nav-text">views模块介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#views配置"><span class="nav-number">2.</span> <span class="nav-text">views配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#views-workflow"><span class="nav-number">3.</span> <span class="nav-text">views workflow</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习资源"><span class="nav-number">4.</span> <span class="nav-text">学习资源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#练习"><span class="nav-number">5.</span> <span class="nav-text">练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#filters"><span class="nav-number">5.1.</span> <span class="nav-text">filters</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#format"><span class="nav-number">5.2.</span> <span class="nav-text">format</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dispaly"><span class="nav-number">5.3.</span> <span class="nav-text">dispaly</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Other"><span class="nav-number">5.4.</span> <span class="nav-text">Other</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他资源"><span class="nav-number">6.</span> <span class="nav-text">其他资源</span></a></li></ol></div>
             
 
           </div>
