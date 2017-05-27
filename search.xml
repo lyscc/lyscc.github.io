@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[多语言]]></title>
+    <url>%2F2017%2F05%2F27%2FMultiligual%2F</url>
+    <content type="text"><![CDATA[drual8的多语言功能超赞！易用！ 安装多语言模块 各模块功能 language模块是其他3个模块的基础模块 interface translation模块用来翻译界面 Content translation模块用来翻译内容 Configuration translation模块用来翻译配置项安装完上边这4个模块，在Configuration &gt; Languages中添加第二语言后，interface翻译绝大多数都翻译好了。一般来说只需要自己翻译content和configuration。 参考资源Making Your Site Multilingual]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>多语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[drupal develop settings]]></title>
+    <url>%2F2017%2F05%2F27%2Fdrupal-develop-settings%2F</url>
+    <content type="text"><![CDATA[在进行drupal8开发前，请确保配置以下项目。这样可以节省很多时间！ 执行时间设置在sites/default/settings.php中添加以下内容，不限制执行时间.1ini_set(&apos;max_execution_time&apos;, 0); 如果不设定，enable module过程中出错，所有画面都不能访问，还不知道解决，很麻烦。 debug和log相关设置参看如何debug，去哪找log views设置参看views-module]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>settings</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[responsive]]></title>
+    <url>%2F2017%2F05%2F26%2Fresponsive%2F</url>
+    <content type="text"><![CDATA[在自适应主题(bootstrap,zen)的基础上进行开发，再对特殊的页面或区域进行调整 推荐的media query1234567891011121314151617181920212223/* Smartphones (portrait and landscape) ----------- */@media only screen and (min-device-width : 320px) and (max-device-width : 480px)&#123; /* Styles */ &#125;/* Smartphones (landscape) ----------- */@media only screen and (min-width : 321px) &#123; /* Styles */ &#125;/* Smartphones (portrait) ----------- */@media only screen and (max-width : 320px) &#123; /* Styles */ &#125;/* iPads (portrait and landscape) ----------- */@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)&#123; /* Styles */ &#125;/* iPads (landscape) ----------- */@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and(orientation : landscape) &#123; /* Styles */ &#125;/* iPads (portrait) ----------- */@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and(orientation : portrait) &#123; /* Styles */ &#125;/* Desktops and laptops ----------- */@media only screen and (min-width : 1224px) &#123; /* Styles */ &#125;/* Large screens ----------- */@media only screen and (min-width : 1824px) &#123; /* Styles */ &#125;/* iPhone 4 ----------- */@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and(min-device-pixel-ratio : 1.5) &#123; /* Styles */ &#125;]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>responsive</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[atom]]></title>
+    <url>%2F2017%2F05%2F24%2Fatom%2F</url>
+    <content type="text"><![CDATA[atom相关索引页。 安装atom安装package 使用代理windows下代理启动atom1http_proxy=http://192.168.20.20:8080 https_proxy=http://192.168.20.20:8080 AppData/Local/atom/atom.exe 参考资源各操作系统设置代理方法]]></content>
+      <tags>
+        <tag>atom</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[views module]]></title>
+    <url>%2F2017%2F05%2F15%2Fviews-module%2F</url>
+    <content type="text"><![CDATA[views模块主要用来查询网站中数据(从哪个表查询数据，用什么条件过滤，取得哪些字段),并配置以何种format(list,table)及何种dispaly(page,block)来显示这些数据。 views模块介绍views首先是一个query builder.在views editor中可以配置query及format。 views配置 Configure Views for debugging 访问admin/structure/views/settings，选中[Show the SQL query] 访问admin/structure/views/settings/advanced,选中[Add Views signature to all SQL queries] 上线运行时停用views UIviews模块包括views和views UI两个模块。上线运行时需要关闭views UI功能。 views workflow choose what to query limit selection with filters view modes or fields select and Configure formatting choose dispalys - and/or add attachments workflow image 学习资源 A Totally Beginner Tutorial to Views for Drupal 7 Views Mini-Course, Part I: An Introduction to Viewsvideo&slide Views Mini-Course, Part II: Creating Flexible Views with Drupal 7video Views Mini-Course, Part III: How to Back Up Your Views Safelyvideo&slide Tips and Tricks for Getting the Most Out of Viewsslide 学习资源1-5备忘 Demo: Your Front Page [Views Mini-Course, Part I: An Introduction to Views] Demo: customize the view add a dispaly [Views Mini-Course, Part I: An Introduction to Views] Demo: Exposed filters [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7] Demo: attachments [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7] Demo: relationship [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7] Demo: contextual filters [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7] calendar [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7] slideshow [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7] admin views [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7] views bulk operation [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7] workbench [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7] Demo: VOB [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7] Don’t forget [Views Mini-Course, Part III: How to Back Up Your Views Safely] Views qulity checklist [Views Mini-Course, Part III: How to Back Up Your Views Safely] anatomy of a view [Views Mini-Course, Part III: How to Back Up Your Views Safely] views basic template [Views Mini-Course, Part III: How to Back Up Your Views Safely] slideshow apache_solr calendar maps 实际网站 [Tips and Tricks for Getting the Most Out of Views] 练习filters Demo: Exposed filters [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7] Use Views to Show Content Created by Drupal Usersexpose filters Demo: relationship [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7] Demo: contextual filters [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7 Manually Select Content for Drupal Views 完成功能使用contextual filters来指定查询条件 Using Entity Reference Fields in Drupal Views 完成功能 Drupal Views Inside Other Views 完成功能 使用模块Views Field View : 连接2个view，传递参数给子view Randomly Show Drupal Content or Users in Views 完成功能使用sort filters来随机显示内容 How to Create a Popular Articles View in Drupal 完成功能按点击顺序排序文章 Show Drupal Content Only With Terms of Specific Depth 完成功能显示Taxonomy子类别的内容 format Show Drupal 8 Content in Tabs, Using Views 完成功能 How to Build Drupal 8 Slideshows 完成功能 Creating a Drupal Slideshow with Views Slideshow 完成功能 使用模块Chaos tool suite (ctools) 用来提高开发体验的api和工具。另外还包括一个叫page manager的模块，这里用到的应该是page manager。views_slideshow 轮播模块 Display Suite and Views Together in Drupal 完成功能 使用模块Display Suite 用来创建复杂页面，控制输出和layout Add CSS Style to Drupal Views 完成功能 Add Links to Fields in Views 完成功能 Use Views to Control Drupal’s Taxonomy Pages 完成功能修改drupal提供的views(点击tags terms后显示的页面) How to Create a Calendar in Drupal 8 完成功能 使用模块Views Templates 提供一些复杂页面的模板calendar 日历模块 dispaly Demo: attachments [Views Mini-Course, Part II: Creating Flexible Views with Drupal 7] Other Demo: Your Front Page [Views Mini-Course, Part I: An Introduction to Views] Demo: customize the view add a dispaly [Views Mini-Course, Part I: An Introduction to Views] How to Create a Glossary View in Drupal 完成功能 Count the Total Number of Results in Drupal Views 使用模块Token 提供核心不支持的token What Does Delta Mean in Drupal? 完成功能“Delta” only appears fields which have multiple value. “Delta” refers to the order of the values 其他资源Learn Views in Drupal 8Views &amp; SQL Analogy - An easier way to explain Viewsdrupal 官网Views guide]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>modules</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[devel module]]></title>
+    <url>%2F2017%2F05%2F12%2Fdevel-module%2F</url>
+    <content type="text"><![CDATA[devel module包括Web Profiler,Devel,Devel generate,Devel Kint4个子模块。安装devel module后，主要能帮助我们做以下4类事情 devel模块介绍 WebProfilerWebProfiler gives you a better sense of how your website works, and how to debug it if it is underperforming. Database选项卡-访问该页面产生的SQL Events选项卡-哪些controller被调用，及调用顺序 Routing选项卡-列出所有的routing path 其他选项卡介绍，请看这里 drush结合devel generate content, review hook implementations等 Devel Generate 生成假数据 dpm()函数或kint($array)函数等 gives you the contents of any variable. Themers use this to know what they can print out in any given template. 参考资源Devel模块介绍enable WebProfiler出错WebProfilers配置]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>modules</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[如何debug，去哪找log]]></title>
+    <url>%2F2017%2F05%2F11%2Flog-and-debug%2F</url>
+    <content type="text"><![CDATA[log和debug相关设置 show all errors by adding a few lines to your local testing site’s settings.php: 123error_reporting(E_ALL);ini_set(&apos;display_errors&apos;, TRUE);ini_set(&apos;display_startup_errors&apos;, TRUE); navigate to Configuration &gt; DEVELOPMENT &gt; Logging and errors (admin/config/development/logging) and select “All messages”. 激活Debug mode激活后，drupal会禁用cache,js和css聚合,修改error_log为详细级别等 拷贝文件到sites/default/ 1cp sites/example.settings.local.php sites/default/settings.local.php 放开sites/default/settings.php中以下内容 123if (file_exists($app_root . &apos;/&apos; . $site_path . &apos;/settings.local.php&apos;)) &#123; include $app_root . &apos;/&apos; . $site_path . &apos;/settings.local.php&apos;;&#125; 开启Twig templates debugsites/default/services.yml 123twig.config: debug: true auto_reload: true Switch on strict PHP error reportingcheck through your php.ini file and set error reporting to E_ALL | E_STRICT. log 网站不能访问 查看apache log 1tail -f &apos;C:\Program Files (x86)\DevDesktop\apache\logs\error.log&apos; drush watch dog 1drush wd-show --tail 通过syslog module 查看logsyslog需要关闭dblog，不适用于开发时使用 网站可以访问 通过dblog module查看系统事件logYour site captures system events in a log to be reviewed by an authorized individual at a later time. The log is a list of recorded events containing usage data, performance data, errors, warnings, and operational information. It is vital to check the log on a regular basis as it is often the only way to tell what is going on.You can find your site’s recent log messages in the Manage administrative menu by navigating to Reports &gt; Recent log messages (admin/reports/dblog). debug tools phpstorm + xdebug chrome xdebug helper插件 devel module 参考资源Show all errors while developingDatabase Logging module overviewSyslog module overviewDebugging Twig templates]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>log</tag>
+        <tag>debug</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[构建drupal8开发环境及发布到web]]></title>
+    <url>%2F2017%2F05%2F11%2Facquia-free-hosting%2F</url>
+    <content type="text"><![CDATA[本文主要记录drupal8本地环境构建以及发布本地代码到acquia的过程。 drupal8本地环境构建 Local server with Acquia Dev Desktop Getting started with Acquia Dev Desktop Working with your sites Using PhpStorm with Acquia Dev Desktop Configuring PHPStorm(本地xdebug) phpstorm正版注册 提交本地代码到acquia在acquia注册并完成drupal环境安装后，代码被提交到acquia git库，所以本地需要配置ssh访问acquia git库。具体步骤如下： acquia云用户免费注册 drupal环境安装 Generating an SSH public key 在Acquia user profile中添加SSH public key 在Acquia Application Information中找到acquia git库 测试访问acquia git库1ssh lyssite@svn-5767.devcloud.hosting.acquia.com:lyssite.git]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>acquia</tag>
+        <tag>hosting</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[todolist]]></title>
+    <url>%2F2017%2F05%2F11%2Ftodolist%2F</url>
+    <content type="text"><![CDATA[了解Acquia Lightning 使用drush安装devel模块不好使 1drush dl devel --select Drupal First Time User Guide - Drupal Learning Curve in One Page 添加css，在最后生效 Drupal How-To: Find great beginner tutorials on Drupal 7https://www.acquia.com/comment/256931 Drupal 8 Tutorials for Beginnershttps://dev.acquia.com/blog/drupal-8-tutorials-for-beginners/19/07/2016/10491 The Beginners Guide to Drupal 8https://www.ostraining.com/class/d8-beginner/ LevelTen drupalesay webwash webomelette views练习 https://www.acquia.com/resources/webinars/easily-create-maps-drupal-leaflet 通读Heather James所有文章 https://dev.acquia.com/users/heather-james Download Drupalize.Me Video(只能下载免费的) http://www.allavsoft.com/how-to/download-drupalize-drupal-training-videos.html http://www.bigasoft.com/articles/download-drupalize-me-training-video.html drupal8 不能实现 Entity Reference Views Help Drupal Content Creators Entity Views Attach: Use Views Almost Anywhere使用hook修改sql应该可以实现这个功能https://api.drupal.org/api/drupal/core%21modules%21views%21views.api.php/function/hook_views_query_alter/8.2.x在node.views_execution.inc中添加hook可以修改sql语句 1234567891011121314151617181920212223242526272829303132333435// 这个可以添加groupBy// 但是好像只要join表了，就默认添加表的id到groupby//错误消息&quot;SQLSTATE[42000]: Syntax error or access violation: 1055 &apos;lyssite_dev.field_tag_taxonomy_term_field_data.nid&apos; isn&apos;t in GROUP BY: SELECT DISTINCT&quot;function node_views_pre_execute(ViewExecutable $view) &#123; if ($view-&gt;id() == &apos;eva_test2&apos;) &#123; $view-&gt;build_info[&apos;query&apos;]-&gt;groupBy(&apos;taxonomy_term_field_data.tid&apos;); $view-&gt;build_info[&apos;query&apos;]-&gt;groupBy(&apos;taxonomy_term_field_data.name&apos;); &#125;&#125;// 这个不能添加groupbyfunction node_views_query_alter($view, $query) &#123; //if ($view-&gt;id() == &apos;eva_test2&apos; &amp;&amp; $view-&gt;getDisplay()-&gt;display[&apos;id&apos;] == &apos;entity_view_1&apos;) &#123; if ($view-&gt;id() == &apos;eva_test2&apos;) &#123; //$query-&gt;add_groupby = array(array(&apos;field&apos;=&gt; &apos;tid&apos;)); /* $query-&gt;fields = array( &apos;taxonomy_term_field_data_name&apos; =&gt; array(&apos;field&apos;=&gt; &apos;name&apos;, &apos;table&apos;=&gt; &apos;taxonomy_term_field_data&apos;, &apos;alias&apos;=&gt; &apos;taxonomy_term_field_data_name&apos;), &apos;tid&apos; =&gt; array(&apos;field&apos;=&gt; &apos;tid&apos;, &apos;table&apos;=&gt; &apos;taxonomy_term_field_data&apos;, &apos;alias&apos;=&gt; &apos;tid&apos;) ); */ &#125;&#125; Show Only Specific Levels of Taxonomy in Views How to Create a Popular Articles View in Drupal自定义views时，block不能实时更新点击数量无法显示drupal8自带的Popular Content模块 How to Rewrite the Output of Views with PHP使用php代码输出内容views_php模块有bug，无法使用 Use Views to Display Fields inside Panelsd8在使用上和例子不同 Views Bulk Operations Makes Mass Updates Easy in DrupalVBO模块正在移植到drupal8的进程中 学习db查询和views相关hook]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[drupal8术语表]]></title>
+    <url>%2F2017%2F05%2F10%2Fterminology%2F</url>
+    <content type="text"><![CDATA[术语 解释 Article One of two content types that are enabled in the standard installation profile. Articles are used for time-sensitive content like news, press releases or blog posts. Basic Page One of two content types that are enabled in the standard installation profile. Typically basic pages are used for static content that can (but are not required to) be linked into the main navigation bar. Block A chunk of content (text, images, links, etc.) that can be displayed on a page of a site. Blocks are displayed in regions. Region A defined area of a page where content can be placed, such as the header, footer, main content area, left sidebar, etc. Regions are defined by themes, and the content displayed in each region is contained in blocks. Content Information meant to be displayed on your site, such as text, images, downloads, etc. Content item An item of content that is typically meant to be displayed as the main content of a page on your site. Content type An entity subtype for the content item entity type. Each content type is used for some particular purpose on the site, and each has its own fields. For example, a site for a farmers market might have a content type for simple pages, and another for a vendor listing page. Entity An item of either content or configuration data, although in common usage, the term often refers to content entities. Examples include content items, custom blocks, taxonomy terms, and definitions of content types; the first three are content entities, and the last is a configuration entity. Field Data of a certain type that is attached to a content entity. For instance, on a farmers market site’s vendor content type, you might have fields for an image, the vendor description, and a taxonomy term. Menu A set of links used for navigation on a site, which may be arranged in a hierarchy. Node A piece of content in Drupal, typically corresponding to a single page on the site, that has a title, an optional body, and perhaps additional fields. Every node also belongs to a particular content type, and can additionally be classified using the taxonomy system. Examples of nodes are polls, stories, book pages and images. Published The state of a node that can be viewed by visitors to the website. To easily hide nodes from the public (i.e. anonymous role), make the node unpublished by unchecking “Published” in the node add/edit form. Reference field A field that represents a relationship between an entity and one or more other entities, which may be the same entity type or a different type. For example, on a farmers market site, a recipe content item might have a reference field to the vendor (also a content item) that posted the recipe. Taxonomy term fields are also reference fields. Taxonomy The process of classifying content Taxonomy term A term used to classify content, such as a tag or a category Teaser A short introductory sentence or paragraph about a piece of content that informs readers about the subject of the content. By default, the first paragraph or two of the content is used (there is a setting for how much), usually with a link to the complete node. Views A core module which allows site developers a simple graphical interface for creating lists of various drupal objects; most notably users and nodes. Views permits selection of specific fields to display, filtration against various node attributes, choice of basic layout options (i.e. list, full nodes, teasers, etc.), and other more advanced features. Many Drupal sites use Views extensively. Weight A term used by Drupal to define the priority or order in which a function is processed or a block / node is displayed. From Drupal 6, the weight field is adjusted dynamically using a drag-and-drop interface. Note: A lower weight value (-10) will float to the top of lists, while heavier (+10) weights will appear lower in lists. WYSIWYG Acronym for What You See is What You Get, meaning a method for editing content where what you see on the editing screen closely resembles the final product.]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>terminology</tag>
+        <tag>glossary</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[创建公司类型网站]]></title>
+    <url>%2F2017%2F05%2F10%2Fexecise-with-beginning-drupal8%2F</url>
+    <content type="text"><![CDATA[5个月前，完全不了解drupal时，跟随者《beginning drupal8.pdf》，经过两遍折腾，实现了书中的例子。2个月前，开始通读drupal.org上的大部分文档及Acquia上的部分文档后，于近期完成。最近这两天感觉遇到了瓶颈，没有了前进的方向。直到昨天读到了 Drupal First Time User Guide - Drupal Learning Curve in One Page 才又找到了前进的方向。对于现阶段的我来说，文章中的【7. Learn Drupal: Steps to build your site】比较适用。 业务需求 需求 drupal实现 公司简介 Basic page content type 客户项目 自定义content type 公司提供的服务，及客户项目链接到服务 Article content type， ArticleType taxonomy vacabulary = service offering(taxonomy term) 核心员工 扩展user profile来增加简介,添加一个view来表示员工profile 能够撰写和发布新闻 Article content type， ArticleType taxonomy vacabulary = news(taxonomy term),添加一个view来表示新闻 feed新闻 Aggregator module 选择员工到博客 Article content type， ArticleType taxonomy vacabulary = blog post(taxonomy term),添加一个view来表示博客 联系表单 Contact module 主导航 Use blocks and menus 页脚（核心页面列表，公司地址，联系方式） Use blocks and menus 公司化的主题 Use a theme from Drupal.org 其他要求 acquia free hosting git管理代码 configuration manangement system 多语言 移动设备优先,自适应 相关terminology整理 尽可能的使用drush完成administrative tasks 构建开发环境 如何debug，去哪找log 使用的modules Devel views]]></content>
+      <tags>
+        <tag>drupal8</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[创建hexo博客]]></title>
+    <url>%2F2017%2F05%2F02%2Fbuild-hexo-blog%2F</url>
+    <content type="text"><![CDATA[本文记录了在windows7下构建hexo环境的步骤。主要包括安装hexo,创建页面，添加tag页面,更换主题，修改主题，添加评论。目的在于快速构建一个实用，漂亮的blog。 安装hexo前提条件 安装Node.js 安装Git 创建代码库(https://github.com/username/username.github.io.git) 删除C:\Users\username.ssh 下所有文件 Generating a new SSH key and adding it to the ssh-agent Adding a new SSH key to your GitHub account 本文所有命令都在Git Bash中执行 安装Hexo1$ npm install -g hexo-cli 初始化Hexo1234$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install hexo-deployer-git --save$ hexo generate 本地查看效果1$ hexo server 启动服务，访问http://localhost:4000 查看效果 发布到github 修改/_config.yml文件内容 1234deploy: type: git repo: https://github.com/username/username.github.io.git branch: master 发布到github 1$ hexo deploy 访问https://username.github.io 查看效果 发布新页面到github 创建页面并发布 123$ hexo new [layout] &lt;title&gt; --创建.md文件$ hexo generate --生成静态页面$ hexo deploy 编写内容Markdown语法Tag Plugins语法 更换主题 主题列表 更换成Light主题 添加标签页面 创建标签一览页面 1hexo new page &quot;tags&quot; 添加以下内容到source/tags/index.md 1type: &quot;tags&quot; TODO 修改theme 添加评论]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+</search>
