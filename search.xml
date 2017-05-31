@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[manage database code files]]></title>
+    <url>%2F2017%2F05%2F31%2Fmanage-database-code-files%2F</url>
+    <content type="text"><![CDATA[drupal8中需要管理的内容主要包括database,code,files. 三种数据的管理 drupal8中很多内容都存储在database中，比如content types，站点名称，使用views模块创建的views等，所以数据库的定期备份很重要。 code使用git来管理。推荐使用phpstorm 的git界面工具，很drupal。(比如：提交界面中默认不会显示contri modules和themes，而只会显示你修改代码) 所有的files都存储在sites/default/files中。 开发时注意 database 每天备份 code 定期提交 files 无 安装新module前,一定要进行数据库备份,他可以挽救你的生命12drush archive-dumpdrush archive-restore 同步时注意devel-&gt;staging,或staging-&gt;product环境，表面理解是整体导出，导入数据库，测试staging或product环境取最新代码就可以了。为什么drupal8弄出个configuration manangement概念，让配置文件可以存储在文件中呢？上线运行一段时间后，再整体导入数据库是不可行的，这样就诞生了configuration manangement. 同步前,一定要进行数据库备份,他可以挽救你的生命 12drush archive-dumpdrush archive-restore 不要修改module’s config/install directory的文件 参考资源Managing your site’s configurationIntroduction to Drupal 8 Configuration Management]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>database</tag>
+        <tag>code</tag>
+        <tag>files</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[多语言]]></title>
     <url>%2F2017%2F05%2F27%2FMultiligual%2F</url>
     <content type="text"><![CDATA[drual8的多语言功能超赞！易用！ 安装多语言模块 各模块功能 language模块是其他3个模块的基础模块 interface translation模块用来翻译界面 Content translation模块用来翻译内容 Configuration translation模块用来翻译配置项安装完上边这4个模块，在Configuration &gt; Languages中添加第二语言后，interface翻译绝大多数都翻译好了。一般来说只需要自己翻译content和configuration。 参考资源Making Your Site Multilingual]]></content>
