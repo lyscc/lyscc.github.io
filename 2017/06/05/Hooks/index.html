@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="drupal8,hooks,function,module," />
 
 
 
@@ -90,15 +90,17 @@
 
 
 
-<meta name="description" content="Ly&apos;s cheat sheet">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ly&#39;s cheat sheet">
-<meta property="og:url" content="http://yoursite.com/tags/多语言/index.html">
+<meta name="description" content="Hooks是module定义的特殊名称的funcion。通常用来修改core module的行为或数据。 php方式理解hook为了完成某项任务定义函数，随着时间的推移，业务的变化，你想要修改这个函数，可是有些人已经使用了这个函数，这个时候该怎么办？答案是：”永远不要修改既存代码”，hook就是用来解决这个问题的。 drupal的方式理解hook我们想对drupal core module的功能进">
+<meta name="keywords" content="drupal8,hooks,function,module">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hooks">
+<meta property="og:url" content="http://yoursite.com/2017/06/05/Hooks/index.html">
 <meta property="og:site_name" content="Ly&#39;s cheat sheet">
-<meta property="og:description" content="Ly&apos;s cheat sheet">
+<meta property="og:description" content="Hooks是module定义的特殊名称的funcion。通常用来修改core module的行为或数据。 php方式理解hook为了完成某项任务定义函数，随着时间的推移，业务的变化，你想要修改这个函数，可是有些人已经使用了这个函数，这个时候该怎么办？答案是：”永远不要修改既存代码”，hook就是用来解决这个问题的。 drupal的方式理解hook我们想对drupal core module的功能进">
+<meta property="og:updated_time" content="2017-06-05T07:12:20.853Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ly&#39;s cheat sheet">
-<meta name="twitter:description" content="Ly&apos;s cheat sheet">
+<meta name="twitter:title" content="Hooks">
+<meta name="twitter:description" content="Hooks是module定义的特殊名称的funcion。通常用来修改core module的行为或数据。 php方式理解hook为了完成某项任务定义函数，随着时间的推移，业务的变化，你想要修改这个函数，可是有些人已经使用了这个函数，这个时候该怎么办？答案是：”永远不要修改既存代码”，hook就是用来解决这个问题的。 drupal的方式理解hook我们想对drupal core module的功能进">
 
 
 
@@ -126,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/多语言/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/05/Hooks/"/>
 
 
 
 
 
-  <title>标签: 多语言 | Ly's cheat sheet</title>
+  <title>Hooks | Ly's cheat sheet</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -157,7 +159,7 @@
     
   
 
-  <div class="container sidebar-position-right  ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -275,44 +277,187 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h1>多语言<small>标签</small>
-      </h1>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/05/Hooks/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ly">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ly's cheat sheet">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Hooks</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T13:20:26+08:00">
+                2017-06-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>Hooks是module定义的特殊名称的funcion。通常用来修改core module的行为或数据。</p>
+<h1 id="php方式理解hook"><a href="#php方式理解hook" class="headerlink" title="php方式理解hook"></a>php方式理解hook</h1><p>为了完成某项任务定义函数，随着时间的推移，业务的变化，你想要修改这个函数，可是有些人已经使用了这个函数，这个时候该怎么办？<br>答案是：”永远不要修改既存代码”，hook就是用来解决这个问题的。</p>
+<h1 id="drupal的方式理解hook"><a href="#drupal的方式理解hook" class="headerlink" title="drupal的方式理解hook"></a>drupal的方式理解hook</h1><p>我们想对drupal core module的功能进行修改，又不修改core module的代码，这个时候就需要用到hook。<br>当drupal core module中的hook被调用时，drupal会做以下3件事：</p>
+<ol>
+<li>取得所有可用的module列表</li>
+<li>询问每一个模块是否实现了对应的hook</li>
+<li>如果模块回答“是”，drupal就会调用模块中的hook实现</li>
+</ol>
+<h1 id="Hooks-vs-Event-Observers"><a href="#Hooks-vs-Event-Observers" class="headerlink" title="Hooks vs. Event/Observers"></a>Hooks vs. Event/Observers</h1><p>Event/Observers say</p>
+<blockquote>
+<p>Hey, just so you know, this happened</p>
+</blockquote>
+<p>Hooks say</p>
+<blockquote>
+<p>Hey, we’re doing this thing, do you want to be part of it?</p>
+</blockquote>
+<h1 id="怎样实现hook"><a href="#怎样实现hook" class="headerlink" title="怎样实现hook"></a>怎样实现hook</h1><ol>
+<li>去*.api.php中找hook函数定义和对应的示例</li>
+<li>拷贝1中hook函数到你的module’s .module文件</li>
+<li>修改hook函数名，替换hook为自定义module名</li>
+<li>编辑注释为”Implements hook函数名”</li>
+<li>修改hook函数内容</li>
+</ol>
+<h1 id="怎样定义hook"><a href="#怎样定义hook" class="headerlink" title="怎样定义hook"></a>怎样定义hook</h1><ol>
+<li>给hook函数起个唯一的名字</li>
+<li>在module’s文件加下创建*.api.php文件，并记述怎样使用这个hook</li>
+<li>在module’s 代码中调用hook</li>
+</ol>
+<h1 id="Types-of-hooks"><a href="#Types-of-hooks" class="headerlink" title="Types of hooks"></a>Types of hooks</h1><ol>
+<li>Hooks that answer a question</li>
+<li>Hooks that alter existing data</li>
+<li>Hooks that react to an action</li>
+</ol>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://api.drupal.org/api/drupal/core%21core.api.php/group/hooks/8.3.x" target="_blank" rel="external">core hook list</a><br><a href="http://alanstorm.com/drupal_module_hooks/" target="_blank" rel="external">good article discussing how Drupal module/hook system works</a><br><a href="https://www.drupal.org/node/292" target="_blank" rel="external">Understanding the hook system for Drupal modules</a><br><a href="https://api.drupal.org/api/drupal/core%21core.api.php/group/hooks/8.3.x" target="_blank" rel="external">the overview of module hooks</a><br><a href="https://drupalize.me/tutorial/what-are-hooks?p=2766" target="_blank" rel="external">What Are Hooks?</a></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      
+    </div>
 
-      <h2 class="post-title">
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/05/27/Multiligual/" itemprop="url">
-              
-                <span itemprop="name">多语言</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-27T13:43:24+08:00"
-              content="2017-05-27" >
-          05-27
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/drupal8/" rel="tag"># drupal8</a>
+          
+            <a href="/tags/hooks/" rel="tag"># hooks</a>
+          
+            <a href="/tags/function/" rel="tag"># function</a>
+          
+            <a href="/tags/module/" rel="tag"># module</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/02/add-css-and-js-to-theme/" rel="next" title="add css and js to theme">
+                <i class="fa fa-chevron-left"></i> add css and js to theme
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -320,6 +465,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -339,8 +488,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -402,6 +560,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#php方式理解hook"><span class="nav-number">1.</span> <span class="nav-text">php方式理解hook</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#drupal的方式理解hook"><span class="nav-number">2.</span> <span class="nav-text">drupal的方式理解hook</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hooks-vs-Event-Observers"><span class="nav-number">3.</span> <span class="nav-text">Hooks vs. Event/Observers</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎样实现hook"><span class="nav-number">4.</span> <span class="nav-text">怎样实现hook</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎样定义hook"><span class="nav-number">5.</span> <span class="nav-text">怎样定义hook</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Types-of-hooks"><span class="nav-number">6.</span> <span class="nav-text">Types of hooks</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -522,6 +696,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 

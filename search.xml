@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hooks]]></title>
+    <url>%2F2017%2F06%2F05%2FHooks%2F</url>
+    <content type="text"><![CDATA[Hooks是module定义的特殊名称的funcion。通常用来修改core module的行为或数据。 php方式理解hook为了完成某项任务定义函数，随着时间的推移，业务的变化，你想要修改这个函数，可是有些人已经使用了这个函数，这个时候该怎么办？答案是：”永远不要修改既存代码”，hook就是用来解决这个问题的。 drupal的方式理解hook我们想对drupal core module的功能进行修改，又不修改core module的代码，这个时候就需要用到hook。当drupal core module中的hook被调用时，drupal会做以下3件事： 取得所有可用的module列表 询问每一个模块是否实现了对应的hook 如果模块回答“是”，drupal就会调用模块中的hook实现 Hooks vs. Event/ObserversEvent/Observers say Hey, just so you know, this happened Hooks say Hey, we’re doing this thing, do you want to be part of it? 怎样实现hook 去*.api.php中找hook函数定义和对应的示例 拷贝1中hook函数到你的module’s .module文件 修改hook函数名，替换hook为自定义module名 编辑注释为”Implements hook函数名” 修改hook函数内容 怎样定义hook 给hook函数起个唯一的名字 在module’s文件加下创建*.api.php文件，并记述怎样使用这个hook 在module’s 代码中调用hook Types of hooks Hooks that answer a question Hooks that alter existing data Hooks that react to an action 参考资料core hook listgood article discussing how Drupal module/hook system worksUnderstanding the hook system for Drupal modulesthe overview of module hooksWhat Are Hooks?]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>hooks</tag>
+        <tag>function</tag>
+        <tag>module</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[add css and js to theme]]></title>
     <url>%2F2017%2F06%2F02%2Fadd-css-and-js-to-theme%2F</url>
     <content type="text"><![CDATA[drupal8以asset library形式来管理css和js.asset library在themes/theme_name/theme_name.libraries.yml文件中定义.asset library是按照顺序加载的，所以请确保自定义的asset library放到theme_name.libraries.yml最后. 前提条件 创建文件themes/theme_name/css/styles.css 创建文件themes/theme_name/js/custom.js 在themes/theme_name/theme_name.libraries.yml中定义新的asset library123456custom: css: theme: css/styles.css: &#123;&#125; js: js/custom.js: &#123;&#125; 站点全页面添加css和js在themes/theme_name/theme_name.info.yml中引用前提条件中定义的asset library12libraries: - &apos;bootstrap/custom&apos; 个别画面添加css和js通常情况会根据route信息来加载相应的css和js。举例：想只在preview画面时引入自定义css和js,可以在themes/theme_name/theme_name.theme中添加以下hook123456function bootstrap_preprocess_page(&amp;$variables) &#123; $variables[&apos;page&apos;][&apos;#cache&apos;][&apos;contexts&apos;][] = &apos;route&apos;; if (\Drupal::routeMatch()-&gt;getRouteName() === &apos;entity.node.preview&apos;) &#123; $variables[&apos;#attached&apos;][&apos;library&apos;][] = &apos;bootstrap/custom&apos;; &#125;&#125; 添加可配置的js当js中需要用到php中的信息时，会用到可配置js功能。举例：想在页面渲染前，添加php信息到drupalSettings，可以在themes/theme_name/theme_name.theme中添加以下hook12345function bootstrap_page_attachments_alter(&amp;$data, &amp;$context1 = NULL, &amp;$context2 = NULL) &#123; $data[&apos;#attached&apos;][&apos;library&apos;][] = &apos;bootstrap/custom&apos;; $data[&apos;#attached&apos;][&apos;drupalSettings&apos;][&apos;foo&apos;] = &apos;bar&apos;; Bootstrap::alter(__FUNCTION__, $data, $context1, $context2);&#125; themes/theme_name/js/custom.js代码12345678910111213(function ($, Drupal, drupalSettings) &#123; &apos;use strict&apos;; Drupal.behaviors.mybehavior = &#123; attach: function (context, settings) &#123; console.log(drupalSettings.foo); &#125; &#125;;&#125;)(jQuery, Drupal, drupalSettings); 参考资源Adding stylesheets (CSS) and JavaScript (JS) to a Drupal 8 theme]]></content>
