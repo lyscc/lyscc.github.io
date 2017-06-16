@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Simple Menu Icons module]]></title>
+    <url>%2F2017%2F06%2F16%2FSimple-Menu-Icons-module%2F</url>
+    <content type="text"><![CDATA[用来实现icon menu。 模块介绍用来实现icon menu。 InstallationSimple Menu Icons Usage 创建menu(title=social),上传icon 把menu放到header block上 编辑simple_menu_icons.module文件，设定menu title为空 修改样式,正确显示icon12345678910111213141516a.menu-icon-13, ul.links li.menu-icon-13 a, ul.menu li.menu-icon-13 a &#123; display: block; width: 21px; height: 21px; padding-left: 0px; background-repeat: round; background-position: inherit;&#125;a.menu-icon-14, ul.links li.menu-icon-14 a, ul.menu li.menu-icon-14 a &#123; display: block; width: 21px; height: 21px; padding-left: 0px; background-repeat: round; background-position: inherit;&#125;]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>modules</tag>
+        <tag>icon-menus</tag>
+        <tag>image-menus</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Video Embed Field module]]></title>
+    <url>%2F2017%2F06%2F15%2FVideo-Embed-Field-module%2F</url>
+    <content type="text"><![CDATA[Video Embed Field 用来创建字段，内嵌YouTube,Vimeo等视频 参考资源The Easiest Way to Embed Videos in Drupal 8]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>modules</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Pathauto module]]></title>
+    <url>%2F2017%2F06%2F15%2FPathauto-module%2F</url>
+    <content type="text"><![CDATA[Pathauto模块自动化URL别名 Install the modulesCreate the Pathauto patternsGenerate the URLs参考资源How to Use Pathauto in Drupal 8]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>modules</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Superfish module]]></title>
     <url>%2F2017%2F06%2F14%2FSuperfish-module%2F</url>
     <content type="text"><![CDATA[superfish用来快速构建drop-down-menus,drop-left-menus。 模块介绍略 Installation Download the Superfish library 2.x and extract it somewhere like /sites/all/libraries/superfish (so that the superfish.js will be located at http://example.com/sites/all/libraries/superfish/superfish.js) Download and extract the Superfish module in /modules. enable the Superfish module. Usage 创建Main navigation树形菜单 12345678Parent Menu 1 |_ Child Menu 1Parent Menu 2 |_ Child Menu 1 |_ Child Menu 2 |_ Sub Child Menu 1 |_ Sub Child Menu 2Parent Menu 3 通过Block Layout添加superfish块到header 怎样修改样式 In the block configuration page, set the Style to None Copy one of the Superfish sample styles, for example default.css from sites/all/libraries/superfish/style to your theme; Rename the selectors .sf-style-default to .sf-style-none or remove them altogether. 主题中引用default.css Some design tipsSet the Mouse delay of the block settings to 99999999 so the sub-menus will stay open for a longer time giving you more time to work with them in Firebug etc. 配置通过配置项可以修改小屏幕表示效果等。 参考资料superfish guide]]></content>
