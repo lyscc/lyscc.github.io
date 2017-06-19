@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[inspect machine name of fields]]></title>
+    <url>%2F2017%2F06%2F19%2Finspect-machine-name-of-fields%2F</url>
+    <content type="text"><![CDATA[views中查看字段(Authored on)的机器名(created)。]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>Tricks</tag>
+        <tag>Tips</tag>
+        <tag>views</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Simple Menu Icons module]]></title>
     <url>%2F2017%2F06%2F16%2FSimple-Menu-Icons-module%2F</url>
     <content type="text"><![CDATA[用来实现icon menu。 模块介绍用来实现icon menu。 InstallationSimple Menu Icons Usage 创建menu(title=social),上传icon 把menu放到header block上 编辑simple_menu_icons.module文件，设定menu title为空 修改样式,正确显示icon12345678910111213141516a.menu-icon-13, ul.links li.menu-icon-13 a, ul.menu li.menu-icon-13 a &#123; display: block; width: 21px; height: 21px; padding-left: 0px; background-repeat: round; background-position: inherit;&#125;a.menu-icon-14, ul.links li.menu-icon-14 a, ul.menu li.menu-icon-14 a &#123; display: block; width: 21px; height: 21px; padding-left: 0px; background-repeat: round; background-position: inherit;&#125;]]></content>
@@ -14,7 +25,7 @@
   <entry>
     <title><![CDATA[Video Embed Field module]]></title>
     <url>%2F2017%2F06%2F15%2FVideo-Embed-Field-module%2F</url>
-    <content type="text"><![CDATA[Video Embed Field 用来创建字段，内嵌YouTube,Vimeo等视频 参考资源The Easiest Way to Embed Videos in Drupal 8]]></content>
+    <content type="text"><![CDATA[Video Embed Field 用来创建字段，内嵌YouTube,Vimeo等视频 参考资源The Easiest Way to Embed Videos in Drupal 8 修改样式1234.video-embed-field-responsive-video &#123; margin: auto; width: 60%;&#125;]]></content>
       <tags>
         <tag>drupal8</tag>
         <tag>modules</tag>
@@ -42,7 +53,7 @@
   <entry>
     <title><![CDATA[Case Study 1: Chicken Soup for the Soul]]></title>
     <url>%2F2017%2F06%2F12%2FCase-Study-1-Chicken-Soup-for-the-Soul%2F</url>
-    <content type="text"><![CDATA[模拟实现Chicken Soup for the Soul站点。 业务需求 需求 drupal实现 公司简介(Wo We Are) Basic page content type television article content type project Dad article content type hidden heroes article content type online videos article content type The sip article content type Distribution article content type video article content type News Aggregator module 不实现 Dads 自定义Dad content type Team 自定义team content type RECENT PRESS 自定义Recent Press content type Social Media(icon) Basic page content type Social Media(text) Basic page content type 多级主导航 Use blocks and menus 页脚-menu Use blocks and menus 页脚-external-menu Use blocks and Basic page 页脚-版权 Use blocks and Basic page 首页slideshow 自定义slideshow content type 首页what we do 自定义what we do content type 首页calltoaction Use blocks and Basic page 公司化的主题 Use a theme from Drupal.org 联系参照站点case study key module videoThe biggest obstacles the project faced were the looming deadline, the relative instability of Drupal 8 immediately following the initial release, and the lack of contributed modules that were available to us. For example, the Media-related modules we would normally use for the online video section were not stable yet. Instead of using a media/file entity as we normally would to store an online video, we leveraged Drupal core’s new URL field to store the URL of the Rumble video, and used a field template to output an embed link. It was a simple and elegant solution to a difficult problem. 备选方案https://www.drupal.org/docs/8/modules/video FeaturesFeatures makes it easy to bundle configuration into modules, and makes it easier to share configuration (in the form of Drupal modules) between the brand’s sites should the need arise in the future. Swift Mailer Pathauto结合Token完成url自动化 Tokenhttps://www.drupal.org/documentation/modules/token Google Analytics Contributed moduleshttps://www.drupal.org/docs/8/modules psd to themehttps://www.youtube.com/watch?v=ITr9hHYPjBAhttps://www.slideshare.net/fourkitchens/from-photoshop-to-drupal-theme-drupalcon-san-francisco-2010/36-Create_a_sitemap_andwireframesHow_willhttps://www.slideshare.net/emmajane/psd-to-theme-acquia-webinar?qid=20f1b599-f214-49f6-8a67-a69c625464cf&amp;v=&amp;b=&amp;from_search=1 TODO 多级菜单 Drop Down menus nice_menus document superfish pathauto+token video google analytics 操作步骤 在acquia上新建站点,通过桌面版取代码到本地 进行drupal开发前设置 备份]]></content>
+    <content type="text"><![CDATA[模拟实现Chicken Soup for the Soul站点。 业务需求 需求 drupal实现 公司简介(Wo We Are) Basic page content type television article content type project Dad article content type hidden heroes article content type online videos article content type The sip article content type Distribution article content type video article content type News Aggregator module 不实现 Dads 自定义Dad content type Team 自定义team content type RECENT PRESS 自定义Recent Press content type Social Media(icon) Basic page content type Social Media(text) Basic page content type 多级主导航 Use blocks and menus 页脚-menu Use blocks and menus 页脚-external-menu Use blocks and Basic page 页脚-版权 Use blocks and Basic page 首页slideshow 自定义slideshow content type 首页what we do 自定义what we do content type 首页calltoaction Use blocks and Basic page 公司化的主题 Use a theme from Drupal.org 联系参照站点case studyhttps://cssentertainment.com/ key module videoThe biggest obstacles the project faced were the looming deadline, the relative instability of Drupal 8 immediately following the initial release, and the lack of contributed modules that were available to us. For example, the Media-related modules we would normally use for the online video section were not stable yet. Instead of using a media/file entity as we normally would to store an online video, we leveraged Drupal core’s new URL field to store the URL of the Rumble video, and used a field template to output an embed link. It was a simple and elegant solution to a difficult problem. 备选方案https://www.drupal.org/docs/8/modules/video FeaturesFeatures makes it easy to bundle configuration into modules, and makes it easier to share configuration (in the form of Drupal modules) between the brand’s sites should the need arise in the future. Swift Mailer Pathauto结合Token完成url自动化 Tokenhttps://www.drupal.org/documentation/modules/token Google Analytics Contributed moduleshttps://www.drupal.org/docs/8/modules psd to themehttps://www.youtube.com/watch?v=ITr9hHYPjBAhttps://www.slideshare.net/fourkitchens/from-photoshop-to-drupal-theme-drupalcon-san-francisco-2010/36-Create_a_sitemap_andwireframesHow_willhttps://www.slideshare.net/emmajane/psd-to-theme-acquia-webinar?qid=20f1b599-f214-49f6-8a67-a69c625464cf&amp;v=&amp;b=&amp;from_search=1 TODO 多级菜单 Drop Down menus nice_menus document superfish pathauto+token video google analytics 操作步骤 在acquia上新建站点,通过桌面版取代码到本地 进行drupal开发前设置 备份]]></content>
       <tags>
         <tag>drupal8</tag>
         <tag>Case Study</tag>
