@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[block title link module]]></title>
+    <url>%2F2017%2F06%2F20%2Fblock-title-link-module%2F</url>
+    <content type="text"><![CDATA[drupal8版本的还没有开发出来。Block Title Link]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>modules</tag>
+        <tag>block title link</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[feed rss and aggregator]]></title>
+    <url>%2F2017%2F06%2F20%2Ffeed-rss-and-aggregator%2F</url>
+    <content type="text"><![CDATA[利用views feed常见对外rss。利用aggregator取得外部网站内容。 feed rss利用views feed创建对外rss。 drupal默认的rss输出views-&gt;feed-&gt;FORMAT-&gt;Content 自定义输出格式(link title to pdf file):views-&gt;feed-&gt;FORMAT-&gt;Fileds-&gt;Settings 设定Title field和Link field后可实现link title to pdf file功能 bugpdf字段生成的URL中缺少sites/，点击title不能正确连接到pdf文件。 rss-publishing设置点击/admin/config/services/rss-publishing进入设置画面，设置Feed content-&gt;Titles Only，这样只显示title字段。 aggregator显示外部站点内容。 访问/admin/config/services/aggregator页面，创建aggregator。 访问/admin/config/system/cron，点击【Run cron】按钮，从外部站点取得内容。 访问/admin/structure/block，放置【Aggregator feed】block到适当的位置，访问页面显示外部站点的内容。]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>modules</tag>
+        <tag>feed rss</tag>
+        <tag>aggregator</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[inspect machine name of fields]]></title>
     <url>%2F2017%2F06%2F19%2Finspect-machine-name-of-fields%2F</url>
     <content type="text"><![CDATA[views中查看字段(Authored on)的机器名(created)。]]></content>
