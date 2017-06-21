@@ -98,7 +98,7 @@
 <meta property="og:site_name" content="Ly&#39;s cheat sheet">
 <meta property="og:description" content="本文主要记录drupal8本地环境构建以及发布本地代码到acquia的过程。 drupal8本地环境构建 Local server with Acquia Dev Desktop Getting started with Acquia Dev Desktop Working with your sites Using PhpStorm with Acquia Dev Desktop Configu">
 <meta property="og:image" content="http://yoursite.com/2017/05/11/acquia-free-hosting/acquia_1.jpg">
-<meta property="og:updated_time" content="2017-05-15T08:16:50.996Z">
+<meta property="og:updated_time" content="2017-06-21T02:29:09.075Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="构建drupal8开发环境及发布到web">
 <meta name="twitter:description" content="本文主要记录drupal8本地环境构建以及发布本地代码到acquia的过程。 drupal8本地环境构建 Local server with Acquia Dev Desktop Getting started with Acquia Dev Desktop Working with your sites Using PhpStorm with Acquia Dev Desktop Configu">
@@ -359,7 +359,15 @@
 <li><a href="https://docs.acquia.com/dev-desktop/start" target="_blank" rel="external">Getting started with Acquia Dev Desktop</a></li>
 <li><a href="https://docs.acquia.com/dev-desktop/sites" target="_blank" rel="external">Working with your sites</a></li>
 <li><a href="https://docs.acquia.com/dev-desktop/sites/phpstorm" target="_blank" rel="external">Using PhpStorm with Acquia Dev Desktop</a></li>
-<li><a href="https://www.drupal.org/docs/develop/development-tools/configuring-phpstorm" target="_blank" rel="external">Configuring PHPStorm(本地xdebug)</a></li>
+<li><p><a href="https://www.drupal.org/docs/develop/development-tools/configuring-phpstorm" target="_blank" rel="external">Configuring PHPStorm(本地xdebug)</a></p>
+<ul>
+<li><p>使用acquia dev在各个版本切换时，需要在对应版本下都设定zend_extension</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">zend_extension=&quot;C:\Program Files (x86)\DevDesktop\php7_0\ext\php_xdebug-2.5.4-7.0-vc14.dll&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p>xdebug版本的选择<br>是否是64位,不是看windows是否是64位，而是看apache是64位还是32位。</p>
+</li>
+</ul>
+</li>
 <li><a href="http://idea.lanyus.com/" target="_blank" rel="external">phpstorm正版注册</a></li>
 </ol>
 <h1 id="提交本地代码到acquia"><a href="#提交本地代码到acquia" class="headerlink" title="提交本地代码到acquia"></a>提交本地代码到acquia</h1><p>在acquia注册并完成drupal环境安装后，代码被提交到acquia git库，所以本地需要配置ssh访问acquia git库。<br>具体步骤如下：</p>

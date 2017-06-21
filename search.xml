@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[block title link module]]></title>
+    <title><![CDATA[block title link]]></title>
     <url>%2F2017%2F06%2F20%2Fblock-title-link-module%2F</url>
-    <content type="text"><![CDATA[drupal8版本的还没有开发出来。Block Title Link]]></content>
+    <content type="text"><![CDATA[给block title添加link的方法汇总。 修改twig 根据Twig debug信息找到使用的block模板。 修改模板1234567&lt;h2&#123;&#123; title_attributes.setAttribute(&apos;id&apos;, heading_id) &#125;&#125;&gt; &#123;% if plugin_id == &apos;system_menu_block:chicken-soup-for-the-soul-e&apos; %&#125; &lt;a href=&quot;/&quot;&gt;&#123;&#123; configuration.label &#125;&#125;&lt;/a&gt; &#123;% else %&#125; &#123;&#123; configuration.label &#125;&#125; &#123;% endif %&#125;&lt;/h2&gt; 使用moduledrupal8版本的还没有开发出来。Block Title Link]]></content>
       <tags>
         <tag>drupal8</tag>
         <tag>modules</tag>
@@ -192,7 +192,7 @@
   <entry>
     <title><![CDATA[构建drupal8开发环境及发布到web]]></title>
     <url>%2F2017%2F05%2F11%2Facquia-free-hosting%2F</url>
-    <content type="text"><![CDATA[本文主要记录drupal8本地环境构建以及发布本地代码到acquia的过程。 drupal8本地环境构建 Local server with Acquia Dev Desktop Getting started with Acquia Dev Desktop Working with your sites Using PhpStorm with Acquia Dev Desktop Configuring PHPStorm(本地xdebug) phpstorm正版注册 提交本地代码到acquia在acquia注册并完成drupal环境安装后，代码被提交到acquia git库，所以本地需要配置ssh访问acquia git库。具体步骤如下： acquia云用户免费注册 drupal环境安装 Generating an SSH public key 在Acquia user profile中添加SSH public key 在Acquia Application Information中找到acquia git库 测试访问acquia git库1ssh lyssite@svn-5767.devcloud.hosting.acquia.com:lyssite.git]]></content>
+    <content type="text"><![CDATA[本文主要记录drupal8本地环境构建以及发布本地代码到acquia的过程。 drupal8本地环境构建 Local server with Acquia Dev Desktop Getting started with Acquia Dev Desktop Working with your sites Using PhpStorm with Acquia Dev Desktop Configuring PHPStorm(本地xdebug) 使用acquia dev在各个版本切换时，需要在对应版本下都设定zend_extension 1zend_extension=&quot;C:\Program Files (x86)\DevDesktop\php7_0\ext\php_xdebug-2.5.4-7.0-vc14.dll&quot; xdebug版本的选择是否是64位,不是看windows是否是64位，而是看apache是64位还是32位。 phpstorm正版注册 提交本地代码到acquia在acquia注册并完成drupal环境安装后，代码被提交到acquia git库，所以本地需要配置ssh访问acquia git库。具体步骤如下： acquia云用户免费注册 drupal环境安装 Generating an SSH public key 在Acquia user profile中添加SSH public key 在Acquia Application Information中找到acquia git库 测试访问acquia git库1ssh lyssite@svn-5767.devcloud.hosting.acquia.com:lyssite.git]]></content>
       <tags>
         <tag>drupal8</tag>
         <tag>acquia</tag>

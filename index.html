@@ -306,7 +306,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/20/block-title-link-module/" itemprop="url">block title link module</a></h1>
+                <a class="post-title-link" href="/2017/06/20/block-title-link-module/" itemprop="url">block title link</a></h1>
         
 
         <div class="post-meta">
@@ -355,9 +355,11 @@
       
         
           
-          drupal8版本的还没有开发出来。Block Title Link
-
-          
+          给block title添加link的方法汇总。
+修改twig
+根据Twig debug信息找到使用的block模板。
+修改模板1234567&lt;h2&#123;&#123; title_attr
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/06/20/block-title-link-module/#more" rel="contents">
