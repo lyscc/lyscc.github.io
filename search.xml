@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Display Suite & Display Suite fields]]></title>
+    <url>%2F2017%2F06%2F23%2FDisplay-Suite-Module%2F</url>
+    <content type="text"><![CDATA[Display Suite &amp; Display Suite fields 用来创建复杂页面，控制输出和layout 模块介绍view mode: teaser(概览显示),full(全显示)Display Suite: 用来控制各content type(User,article)的各view mode方式下layout(one column,two column)Display Suite fields: 用来添加自定义字段到Display Suite 使用方法目标:实现两列显示在右侧列添加”go back”字段 创建”user full”view mode(/admin/structure/display-modes/view) 创建”go back”自定义字段(/admin/structure/ds/fields) 管理”user full” display suite(/admin/config/people/accounts/display/user_full) views中设定Display Suite:User的view mode=User Full(/admin/structure/views/view/our_team/edit/attachment_1) 参考资料Using Display Suite in Drupal 8: How to Use Display Suite Fields]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>Module</tag>
+        <tag>Display Suite</tag>
+        <tag>Display Suite fields</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[block title link]]></title>
     <url>%2F2017%2F06%2F20%2Fblock-title-link-module%2F</url>
     <content type="text"><![CDATA[给block title添加link的方法汇总。 修改twig 根据Twig debug信息找到使用的block模板。 修改模板1234567&lt;h2&#123;&#123; title_attributes.setAttribute(&apos;id&apos;, heading_id) &#125;&#125;&gt; &#123;% if plugin_id == &apos;system_menu_block:chicken-soup-for-the-soul-e&apos; %&#125; &lt;a href=&quot;/&quot;&gt;&#123;&#123; configuration.label &#125;&#125;&lt;/a&gt; &#123;% else %&#125; &#123;&#123; configuration.label &#125;&#125; &#123;% endif %&#125;&lt;/h2&gt; 使用moduledrupal8版本的还没有开发出来。Block Title Link]]></content>
