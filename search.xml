@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[dots slideshow]]></title>
+    <url>%2F2017%2F06%2F26%2Fdots-slideshow%2F</url>
+    <content type="text"><![CDATA[利用views slideshow模块实现dots slideshow效果。点击图片迁移到本站其它页面。 本文以实现如下效果为目标 安装views slideshowviews_slideshow 配置views slideshow Download cycle 将1解压后放到站点跟目录下 创建views 添加image字段和custom text字段点击custom text设置为非显示,Text内容为”1” 点击Fommat -&gt; Settings,设置cycle效果 点击Fommat -&gt; Settings,设置Pager效果 自定义dots样式创建views后，views_slideshow模块生成的dom结构如下：根据dom结构修改dots样式1234567891011121314151617181920212223242526272829303132333435363738/* dots view slideshow */.views-slideshow-controls-bottom &#123; /* 控制dots位置 */ position: absolute; bottom: 30px; /* 在图片上层显示dots层 */ z-index: 100; /* 控制dots居中 */ width: 100%; text-align: center;&#125;.views_slideshow_pager_field_item &#123; /* 三个dots在一行显示 */ display: inline-block; width: 12px; height: 12px; border-radius: 50px; margin: 0 5px;&#125;.active &#123; background-color: #fff; opacity: .75;&#125;.views-content-nothing &#123; display: block; border-radius: 50px; height: 12px; width: 12px; padding: 5px; background-color: #fff; border: 1px solid #fff; cursor: pointer; /* 隐藏内容 */ font-size: 0; line-height: 0;&#125;]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>modules</tag>
+        <tag>dots slideshow</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Display Suite & Display Suite fields]]></title>
     <url>%2F2017%2F06%2F23%2FDisplay-Suite-Module%2F</url>
     <content type="text"><![CDATA[Display Suite &amp; Display Suite fields 用来创建复杂页面，控制输出和layout 模块介绍view mode: teaser(概览显示),full(全显示)Display Suite: 用来控制各content type(User,article)的各view mode方式下layout(one column,two column)Display Suite fields: 用来添加自定义字段到Display Suite 使用方法目标:实现两列显示在右侧列添加”go back”字段 创建”user full”view mode(/admin/structure/display-modes/view) 创建”go back”自定义字段(/admin/structure/ds/fields) 管理”user full” display suite(/admin/config/people/accounts/display/user_full) views中设定Display Suite:User的view mode=User Full(/admin/structure/views/view/our_team/edit/attachment_1) 参考资料Using Display Suite in Drupal 8: How to Use Display Suite Fields]]></content>
