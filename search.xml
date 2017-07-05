@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[扩展修改drupal]]></title>
+    <url>%2F2017%2F07%2F05%2Fdevelop%2F</url>
+    <content type="text"><![CDATA[使用drupal进行站点开发时，80%的工作可以通过使用core module和contributed module完成，另外的20%需要自定义开发。然而，通过前边两个练习项目的体会却是，自定义开发部分（扩展修改drupal）的效率却决定着整体的开发效率。所以今天开始进入学习”扩展修改drupal”阶段。 概览Extending and altering Drupal 扩展类型 Themes Theme system and render API topic Theming Drupal 8 Render API Theme system overview Modules Installation profiles 修改方法 Hooks 模块定义的特殊名称的函数 通常用来修改行为或数据 Plugins 模块定义的类 用来增加功能 Entities 特定的plugin 用来存储新类型的content 或 configuration Services 执行基本操作的类 比如访问数据库或者发送mail Routing Events 参考资料https://api.drupal.org/api/drupalhttps://www.drupal.org/developing/apihttp://cgit.drupalcode.org/examples/]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>扩展</tag>
+        <tag>修改</tag>
+        <tag>开发</tag>
+        <tag>extend</tag>
+        <tag>modify</tag>
+        <tag>develop</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[dots slideshow]]></title>
     <url>%2F2017%2F06%2F26%2Fdots-slideshow%2F</url>
     <content type="text"><![CDATA[利用views slideshow模块实现dots slideshow效果。点击图片迁移到本站其它页面。 本文以实现如下效果为目标 安装views slideshowviews_slideshow 配置views slideshow Download cycle 将1解压后放到站点跟目录下 创建views 添加image字段和custom text字段点击custom text设置为非显示,Text内容为”1” 点击Fommat -&gt; Settings,设置cycle效果 点击Fommat -&gt; Settings,设置Pager效果 自定义dots样式创建views后，views_slideshow模块生成的dom结构如下：根据dom结构修改dots样式1234567891011121314151617181920212223242526272829303132333435363738/* dots view slideshow */.views-slideshow-controls-bottom &#123; /* 控制dots位置 */ position: absolute; bottom: 30px; /* 在图片上层显示dots层 */ z-index: 100; /* 控制dots居中 */ width: 100%; text-align: center;&#125;.views_slideshow_pager_field_item &#123; /* 三个dots在一行显示 */ display: inline-block; width: 12px; height: 12px; border-radius: 50px; margin: 0 5px;&#125;.active &#123; background-color: #fff; opacity: .75;&#125;.views-content-nothing &#123; display: block; border-radius: 50px; height: 12px; width: 12px; padding: 5px; background-color: #fff; border: 1px solid #fff; cursor: pointer; /* 隐藏内容 */ font-size: 0; line-height: 0;&#125;]]></content>
