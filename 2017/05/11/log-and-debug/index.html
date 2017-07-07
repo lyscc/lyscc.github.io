@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="drupal8,log,debug," />
+  <meta name="keywords" content="drupal8,debug,log," />
 
 
 
@@ -91,13 +91,13 @@
 
 
 <meta name="description" content="log和debug相关设置 show all errors by adding a few lines to your local testing site’s settings.php: 123error_reporting(E_ALL);ini_set(&amp;apos;display_errors&amp;apos;, TRUE);ini_set(&amp;apos;display_startup_errors&amp;">
-<meta name="keywords" content="drupal8,log,debug">
+<meta name="keywords" content="drupal8,debug,log">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何debug，去哪找log">
 <meta property="og:url" content="http://yoursite.com/2017/05/11/log-and-debug/index.html">
 <meta property="og:site_name" content="Ly&#39;s cheat sheet">
 <meta property="og:description" content="log和debug相关设置 show all errors by adding a few lines to your local testing site’s settings.php: 123error_reporting(E_ALL);ini_set(&amp;apos;display_errors&amp;apos;, TRUE);ini_set(&amp;apos;display_startup_errors&amp;">
-<meta property="og:updated_time" content="2017-06-02T07:33:11.127Z">
+<meta property="og:updated_time" content="2017-07-07T02:09:08.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何debug，去哪找log">
 <meta name="twitter:description" content="log和debug相关设置 show all errors by adding a few lines to your local testing site’s settings.php: 123error_reporting(E_ALL);ini_set(&amp;apos;display_errors&amp;apos;, TRUE);ini_set(&amp;apos;display_startup_errors&amp;">
@@ -370,6 +370,9 @@
 <li><p>开启Twig templates debug<br>sites/default/services.yml</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">twig.config:</div><div class="line">  debug: true</div><div class="line">  auto_reload: true</div></pre></td></tr></table></figure>
 </li>
+<li><p>开启Render API cache debug<br>sites/default/settings.local.php</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$settings[&apos;container_yamls&apos;][] = DRUPAL_ROOT . &apos;/sites/development.services.yml&apos;;</div><div class="line">$settings[&apos;cache&apos;][&apos;bins&apos;][&apos;render&apos;] = &apos;cache.backend.null&apos;;</div><div class="line">$settings[&apos;cache&apos;][&apos;bins&apos;][&apos;dynamic_page_cache&apos;] = &apos;cache.backend.null&apos;;</div></pre></td></tr></table></figure>
+</li>
 <li><p><del>Switch on strict PHP error reporting</del><br><del>check through your php.ini file and set error reporting to E_ALL | E_STRICT.</del></p>
 </li>
 </ul>
@@ -396,6 +399,7 @@
 <li><a href="https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc/related?hl=en" target="_blank" rel="external">chrome xdebug helper插件</a></li>
 </ul>
 </li>
+<li><a href="../../../07/06/Twig-Xdebug-Module/index.html">Twig_Xdebug module</a></li>
 <li><a href="../../12/devel-module/index.html">devel module</a></li>
 </ol>
 <h1 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h1><p><a href="https://www.drupal.org/node/1056468" target="_blank" rel="external">Show all errors while developing</a><br><a href="https://www.drupal.org/docs/8/core/modules/dblog/overview" target="_blank" rel="external">Database Logging module overview</a><br><a href="https://www.drupal.org/docs/8/core/modules/syslog/overview" target="_blank" rel="external">Syslog module overview</a><br><a href="https://www.drupal.org/node/1906392" target="_blank" rel="external">Debugging Twig templates</a><br><a href="https://www.webwash.net/drupal-8-debugging-techniques/" target="_blank" rel="external">drupal-8-debugging-techniques</a></p>
@@ -430,9 +434,9 @@
           
             <a href="/tags/drupal8/" rel="tag"># drupal8</a>
           
-            <a href="/tags/log/" rel="tag"># log</a>
-          
             <a href="/tags/debug/" rel="tag"># debug</a>
+          
+            <a href="/tags/log/" rel="tag"># log</a>
           
         </div>
       
@@ -529,7 +533,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -551,7 +555,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-count">49</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

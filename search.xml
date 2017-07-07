@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[扩展修改drupal]]></title>
-    <url>%2F2017%2F07%2F05%2Fdevelop%2F</url>
-    <content type="text"><![CDATA[使用drupal进行站点开发时，80%的工作可以通过使用core module和contributed module完成，另外的20%需要自定义开发。然而，通过前边两个练习项目的体会却是，自定义开发部分（扩展修改drupal）的效率却决定着整体的开发效率。所以今天开始进入学习”扩展修改drupal”阶段。 概览Extending and altering Drupal 扩展类型 Themes Theme system and render API topic Theming Drupal 8 Render API Theme system overview Modules Installation profiles 修改方法 Hooks 模块定义的特殊名称的函数 通常用来修改行为或数据 Plugins 模块定义的类 用来增加功能 Entities 特定的plugin 用来存储新类型的content 或 configuration Services 执行基本操作的类 比如访问数据库或者发送mail Routing Events 参考资料https://api.drupal.org/api/drupalhttps://www.drupal.org/developing/apihttp://cgit.drupalcode.org/examples/]]></content>
+    <title><![CDATA[create custom twig(Render Array)]]></title>
+    <url>%2F2017%2F07%2F07%2Fcreate-custom-twig%2F</url>
+    <content type="text"><![CDATA[Creating Elements, Theming Elements, and Managing Front-end LibrariesCreate custom twig templates from custom module]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Twig_Xdebug Module]]></title>
+    <url>%2F2017%2F07%2F06%2FTwig-Xdebug-Module%2F</url>
+    <content type="text"><![CDATA[xdebug查看Twig中所有变量。 安装安装Twig_Xdebug方法 使用方法 把下边代码放到twig文件中 1&#123;&#123;breakpoint()&#125;&#125; 启动xdebug调试，断点会停留在BreakpointExtension.php文件中，在这里可以查看模板变量 BreakpointExtension.php变量 转化为 twig变量 debug时变量1$context[&apos;elements&apos;][&apos;#configuration&apos;][&apos;label&apos;] ↓twig变量1configuration.label]]></content>
       <tags>
         <tag>drupal8</tag>
-        <tag>扩展</tag>
+        <tag>module</tag>
+        <tag>twig</tag>
+        <tag>debug</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[alert theme]]></title>
+    <url>%2F2017%2F07%2F06%2Falert-theme%2F</url>
+    <content type="text"><![CDATA[覆盖模板方法及修改主题建议方法 主题系统是怎样运作的 Theme system and render API topic Theming Drupal 8 Render API Theme system overview 覆盖模板方法举例说明：在block上放置一个title=“menu title link”的menu。drupal core contrib theme生成的hook suggestions如下图drupal会按照上图中建议顺序在自定义主题模板目录下查找并使用对应的文件自定义主题目录：docroot\themes\custom\bootstrap_sub\templates Overriding templates 修改主题建议方法覆盖模板方法不会经常使用，更经常用到的方法是修改Theme hook suggestions。比如：node有两个bundle，一个是basic，一个是article，想让basic使用默认的node.html.twig,而想让article使用article.html.twig这种情况可以使用以下3个hook方法来实现 hook_theme_suggestions_HOOKhook_theme_suggestions_alterhook_theme_suggestions_HOOK_alter hook可以是module名也可以是theme名HOOK可以是toolbar,page,region,block,node等共用5个类hook可用，调用顺序如下：123456789my_module_theme_suggestions_node↓my_module_theme_suggestions_alter↓my_theme_theme_suggestions_alter↓my_module_suggestions_node_alter↓my_theme_theme_suggestions_node_alter 后面会覆盖前边尽量使用下边的hook来生成HOOK SUGGESTION Theme hook suggestions 模板有哪些变量?Twig_Xdebug]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>theme</tag>
+        <tag>alert</tag>
         <tag>修改</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[扩展修改drupal]]></title>
+    <url>%2F2017%2F07%2F05%2Fdevelop%2F</url>
+    <content type="text"><![CDATA[使用drupal进行站点开发时，80%的工作可以通过使用core module和contributed module完成，另外的20%需要自定义开发。然而，通过前边两个练习项目的体会却是，自定义开发部分（扩展修改drupal）的效率却决定着整体的开发效率。所以今天开始进入学习”扩展修改drupal”阶段。 概览Extending and altering Drupal 扩展类型 Themesalert theme Modules Installation profiles 修改方法 Hooks 模块定义的特殊名称的函数 通常用来修改行为或数据 Plugins 模块定义的类 用来增加功能 Entities 特定的plugin 用来存储新类型的content 或 configuration Services 执行基本操作的类 比如访问数据库或者发送mail Routing Events 参考资料https://api.drupal.org/api/drupalhttps://www.drupal.org/developing/apihttp://cgit.drupalcode.org/examples/]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>修改</tag>
+        <tag>扩展</tag>
         <tag>开发</tag>
         <tag>extend</tag>
         <tag>modify</tag>
@@ -217,11 +244,11 @@
   <entry>
     <title><![CDATA[如何debug，去哪找log]]></title>
     <url>%2F2017%2F05%2F11%2Flog-and-debug%2F</url>
-    <content type="text"><![CDATA[log和debug相关设置 show all errors by adding a few lines to your local testing site’s settings.php: 123error_reporting(E_ALL);ini_set(&apos;display_errors&apos;, TRUE);ini_set(&apos;display_startup_errors&apos;, TRUE); navigate to Configuration &gt; DEVELOPMENT &gt; Logging and errors (admin/config/development/logging) and select “All messages”. 激活Debug mode激活后，drupal会禁用cache,js和css聚合,修改error_log为详细级别等 拷贝文件到sites/default/ 1cp sites/example.settings.local.php sites/default/settings.local.php 放开sites/default/settings.php中以下内容 123if (file_exists($app_root . &apos;/&apos; . $site_path . &apos;/settings.local.php&apos;)) &#123; include $app_root . &apos;/&apos; . $site_path . &apos;/settings.local.php&apos;;&#125; 开启Twig templates debugsites/default/services.yml 123twig.config: debug: true auto_reload: true Switch on strict PHP error reportingcheck through your php.ini file and set error reporting to E_ALL | E_STRICT. log 网站不能访问 查看apache log 1tail -f &apos;C:\Program Files (x86)\DevDesktop\apache\logs\error.log&apos; drush watch dog 1drush wd-show --tail 通过syslog module 查看logsyslog需要关闭dblog，不适用于开发时使用 网站可以访问 通过dblog module查看系统事件logYour site captures system events in a log to be reviewed by an authorized individual at a later time. The log is a list of recorded events containing usage data, performance data, errors, warnings, and operational information. It is vital to check the log on a regular basis as it is often the only way to tell what is going on.You can find your site’s recent log messages in the Manage administrative menu by navigating to Reports &gt; Recent log messages (admin/reports/dblog). debug tools phpstorm + xdebug chrome xdebug helper插件 devel module 参考资源Show all errors while developingDatabase Logging module overviewSyslog module overviewDebugging Twig templatesdrupal-8-debugging-techniques]]></content>
+    <content type="text"><![CDATA[log和debug相关设置 show all errors by adding a few lines to your local testing site’s settings.php: 123error_reporting(E_ALL);ini_set(&apos;display_errors&apos;, TRUE);ini_set(&apos;display_startup_errors&apos;, TRUE); navigate to Configuration &gt; DEVELOPMENT &gt; Logging and errors (admin/config/development/logging) and select “All messages”. 激活Debug mode激活后，drupal会禁用cache,js和css聚合,修改error_log为详细级别等 拷贝文件到sites/default/ 1cp sites/example.settings.local.php sites/default/settings.local.php 放开sites/default/settings.php中以下内容 123if (file_exists($app_root . &apos;/&apos; . $site_path . &apos;/settings.local.php&apos;)) &#123; include $app_root . &apos;/&apos; . $site_path . &apos;/settings.local.php&apos;;&#125; 开启Twig templates debugsites/default/services.yml 123twig.config: debug: true auto_reload: true 开启Render API cache debugsites/default/settings.local.php 123$settings[&apos;container_yamls&apos;][] = DRUPAL_ROOT . &apos;/sites/development.services.yml&apos;;$settings[&apos;cache&apos;][&apos;bins&apos;][&apos;render&apos;] = &apos;cache.backend.null&apos;;$settings[&apos;cache&apos;][&apos;bins&apos;][&apos;dynamic_page_cache&apos;] = &apos;cache.backend.null&apos;; Switch on strict PHP error reportingcheck through your php.ini file and set error reporting to E_ALL | E_STRICT. log 网站不能访问 查看apache log 1tail -f &apos;C:\Program Files (x86)\DevDesktop\apache\logs\error.log&apos; drush watch dog 1drush wd-show --tail 通过syslog module 查看logsyslog需要关闭dblog，不适用于开发时使用 网站可以访问 通过dblog module查看系统事件logYour site captures system events in a log to be reviewed by an authorized individual at a later time. The log is a list of recorded events containing usage data, performance data, errors, warnings, and operational information. It is vital to check the log on a regular basis as it is often the only way to tell what is going on.You can find your site’s recent log messages in the Manage administrative menu by navigating to Reports &gt; Recent log messages (admin/reports/dblog). debug tools phpstorm + xdebug chrome xdebug helper插件 Twig_Xdebug module devel module 参考资源Show all errors while developingDatabase Logging module overviewSyslog module overviewDebugging Twig templatesdrupal-8-debugging-techniques]]></content>
       <tags>
         <tag>drupal8</tag>
-        <tag>log</tag>
         <tag>debug</tag>
+        <tag>log</tag>
       </tags>
   </entry>
   <entry>
