@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="drupal8,hook_preprocess_HOOK,Render arrays,hook_theme," />
 
 
 
@@ -90,16 +90,19 @@
 
 
 
-<meta name="description" content="Creating Elements, Theming Elements, and Managing Front-end LibrariesCreate custom twig templates from custom module">
+<meta name="description" content="概念 Elements在drupal中，页面的各个部分被组织微elements。这些elements通常包括其他elements。比如：links, buttons, fields, images, nodes, blocks, pages都是elements。 Render arrays用来存储关于elements信息的php概念叫做Render arrays.Render arrays包括以下">
+<meta name="keywords" content="drupal8,hook_preprocess_HOOK,Render arrays,hook_theme">
 <meta property="og:type" content="article">
-<meta property="og:title" content="create custom twig(Render Array)">
+<meta property="og:title" content="创建自定义模板(Render Array)">
 <meta property="og:url" content="http://yoursite.com/2017/07/07/create-custom-twig/index.html">
 <meta property="og:site_name" content="Ly&#39;s cheat sheet">
-<meta property="og:description" content="Creating Elements, Theming Elements, and Managing Front-end LibrariesCreate custom twig templates from custom module">
-<meta property="og:updated_time" content="2017-07-07T07:26:35.190Z">
+<meta property="og:description" content="概念 Elements在drupal中，页面的各个部分被组织微elements。这些elements通常包括其他elements。比如：links, buttons, fields, images, nodes, blocks, pages都是elements。 Render arrays用来存储关于elements信息的php概念叫做Render arrays.Render arrays包括以下">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/create-custom-twig/D8RenderArrayEntireMap.png">
+<meta property="og:updated_time" content="2017-07-10T08:03:37.370Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="create custom twig(Render Array)">
-<meta name="twitter:description" content="Creating Elements, Theming Elements, and Managing Front-end LibrariesCreate custom twig templates from custom module">
+<meta name="twitter:title" content="创建自定义模板(Render Array)">
+<meta name="twitter:description" content="概念 Elements在drupal中，页面的各个部分被组织微elements。这些elements通常包括其他elements。比如：links, buttons, fields, images, nodes, blocks, pages都是elements。 Render arrays用来存储关于elements信息的php概念叫做Render arrays.Render arrays包括以下">
+<meta name="twitter:image" content="http://yoursite.com/2017/07/07/create-custom-twig/D8RenderArrayEntireMap.png">
 
 
 
@@ -133,7 +136,7 @@
 
 
 
-  <title>create custom twig(Render Array) | Ly's cheat sheet</title>
+  <title>创建自定义模板(Render Array) | Ly's cheat sheet</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -303,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">create custom twig(Render Array)</h1>
+          <h1 class="post-title" itemprop="name headline">创建自定义模板(Render Array)</h1>
         
 
         <div class="post-meta">
@@ -350,7 +353,53 @@
       
 
       
-        <p><a href="https://docs.acquia.com/articles/drupal-8-patterns-overview" target="_blank" rel="external"> Creating Elements, Theming Elements, and Managing Front-end Libraries</a><br><a href="https://www.drupal.org/docs/8/theming/twig/create-custom-twig-templates-from-custom-module" target="_blank" rel="external">Create custom twig templates from custom module</a></p>
+        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><ul>
+<li>Elements<br>在drupal中，页面的各个部分被组织微elements。这些elements通常包括其他elements。<br>比如：links, buttons, fields, images, nodes, blocks, pages都是elements。</li>
+<li><p>Render arrays<br>用来存储关于elements信息的php概念叫做Render arrays.<br>Render arrays包括以下三种类型</p>
+<ul>
+<li>#markup</li>
+<li>#theme</li>
+<li>#type</li>
+</ul>
+</li>
+<li><p>Twig templates<br>Twig templates是将Render Arrays转换成markup的文件。</p>
+</li>
+</ul>
+<h1 id="Overview-of-the-available-patterns"><a href="#Overview-of-the-available-patterns" class="headerlink" title="Overview of the available patterns"></a>Overview of the available patterns</h1><img src="/2017/07/07/create-custom-twig/D8RenderArrayEntireMap.png" alt="D8RenderArrayEntireMap.png" title="">
+<h1 id="Render-arrays-theme-方式创建模板"><a href="#Render-arrays-theme-方式创建模板" class="headerlink" title="Render arrays #theme 方式创建模板"></a>Render arrays #theme 方式创建模板</h1><ol>
+<li><p>在hook_theme中注册模板</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># for #theme</div><div class="line">&apos;my_template&apos; =&gt; [</div><div class="line">&apos;variables&apos; =&gt; [&apos;test_var&apos; =&gt; NULL],</div><div class="line">],</div></pre></td></tr></table></figure>
+</li>
+<li><p>在controller中调用模板</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;#theme&apos; =&gt; &apos;my_template&apos;,</div><div class="line">&apos;#test_var&apos; =&gt; $this-&gt;t(&apos;Test Value&apos;),</div></pre></td></tr></table></figure>
+</li>
+<li><p>渲染步骤1中注册的模板<br>templates/my-template.html.twig</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;Test twig template!&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;p&gt;test_var: &#123;&#123; test_var &#125;&#125;&lt;/p&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="Render-arrays-type-方式创建模板"><a href="#Render-arrays-type-方式创建模板" class="headerlink" title="Render arrays #type 方式创建模板"></a>Render arrays #type 方式创建模板</h1><ol>
+<li><p>在hook_theme中注册模板</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># for #type</div><div class="line">     &apos;my_element&apos; =&gt; [</div><div class="line">         &apos;render element&apos; =&gt; &apos;element&apos;,</div><div class="line">     ],</div></pre></td></tr></table></figure>
+</li>
+<li><p>在controller中调用模板</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;#type&apos; =&gt; &apos;my_element&apos;,</div><div class="line">&apos;#label&apos; =&gt; $this-&gt;t(&apos;Example Label&apos;),</div></pre></td></tr></table></figure>
+</li>
+<li><p>调用RenderElement子类模板逻辑<br>src/element/MyElement.php</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">class MyElement extends RenderElement &#123;</div><div class="line">  # 定义element结构</div><div class="line">  public function getInfo() &#123;</div><div class="line">  &#125;</div><div class="line">  # 设定element值</div><div class="line">  public static function preRenderMyElement($element) &#123;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>渲染步骤1中注册的模板<br>templates/my-element.html.twig</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;myElement&quot;&gt;</div><div class="line">    &lt;div class=&quot;randomNumber&quot;&gt;Random Number: &#123;&#123; element[&apos;#random_number&apos;] &#125;&#125;&lt;/div&gt;</div><div class="line">    &lt;p&gt;&#123;&#123; element.description &#125;&#125;&lt;/p&gt;</div><div class="line">    &#123;&#123; element.link &#125;&#125;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="修改Render-arrays的值"><a href="#修改Render-arrays的值" class="headerlink" title="修改Render arrays的值"></a>修改Render arrays的值</h1><ol>
+<li><p><a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_preprocess_HOOK/8.2.x" target="_blank" rel="external">hook_preprocess_HOOK</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function test_twig_preprocess_my_template(&amp;$variables) &#123;</div><div class="line">    $variables[&apos;test_var&apos;] = &apos;Test Value changed by hook_preprocess_HOOK&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改block Render array<a href="https://api.drupal.org/api/drupal/core%21modules%21block%21block.api.php/function/hook_block_view_alter/8.2.x" target="_blank" rel="external">hook_block_view_alter</a> 和 修改entity Render array<a href="https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Entity!entity.api.php/function/hook_entity_view_alter/8.2.x" target="_blank" rel="external">hook_entity_view_alter</a><br>刚构建完Render arrays时修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function test_block_view_alter(array &amp;$build, \Drupal\Core\Block\BlockPluginInterface $block) &#123;</div><div class="line">    if ($build[&apos;#plugin_id&apos;] == &apos;system_menu_block:menu-title-link&apos;) &#123;</div><div class="line">        $build[&apos;#configuration&apos;][&apos;label&apos;] = &apos;&lt;a href=&quot;/test5&quot;&gt;xxxx&lt;/a&gt;&apos;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://docs.acquia.com/articles/drupal-8-patterns-overview" target="_blank" rel="external"> Creating Elements, Theming Elements, and Managing Front-end Libraries</a><br><a href="https://www.drupal.org/docs/8/theming/twig/create-custom-twig-templates-from-custom-module" target="_blank" rel="external">Create custom twig templates from custom module</a></p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
       
     </div>
@@ -377,6 +426,18 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/drupal8/" rel="tag"># drupal8</a>
+          
+            <a href="/tags/hook-preprocess-HOOK/" rel="tag"># hook_preprocess_HOOK</a>
+          
+            <a href="/tags/Render-arrays/" rel="tag"># Render arrays</a>
+          
+            <a href="/tags/hook-theme/" rel="tag"># hook_theme</a>
+          
+        </div>
       
 
       
@@ -442,8 +503,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -480,7 +550,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">55</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -505,6 +575,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Overview-of-the-available-patterns"><span class="nav-number">2.</span> <span class="nav-text">Overview of the available patterns</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Render-arrays-theme-方式创建模板"><span class="nav-number">3.</span> <span class="nav-text">Render arrays #theme 方式创建模板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Render-arrays-type-方式创建模板"><span class="nav-number">4.</span> <span class="nav-text">Render arrays #type 方式创建模板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改Render-arrays的值"><span class="nav-number">5.</span> <span class="nav-text">修改Render arrays的值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

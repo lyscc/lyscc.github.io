@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[create custom twig(Render Array)]]></title>
+    <title><![CDATA[创建自定义模板(Render Array)]]></title>
     <url>%2F2017%2F07%2F07%2Fcreate-custom-twig%2F</url>
-    <content type="text"><![CDATA[Creating Elements, Theming Elements, and Managing Front-end LibrariesCreate custom twig templates from custom module]]></content>
+    <content type="text"><![CDATA[概念 Elements在drupal中，页面的各个部分被组织微elements。这些elements通常包括其他elements。比如：links, buttons, fields, images, nodes, blocks, pages都是elements。 Render arrays用来存储关于elements信息的php概念叫做Render arrays.Render arrays包括以下三种类型 #markup #theme #type Twig templatesTwig templates是将Render Arrays转换成markup的文件。 Overview of the available patterns Render arrays #theme 方式创建模板 在hook_theme中注册模板 1234# for #theme&apos;my_template&apos; =&gt; [&apos;variables&apos; =&gt; [&apos;test_var&apos; =&gt; NULL],], 在controller中调用模板 12&apos;#theme&apos; =&gt; &apos;my_template&apos;,&apos;#test_var&apos; =&gt; $this-&gt;t(&apos;Test Value&apos;), 渲染步骤1中注册的模板templates/my-template.html.twig 123&lt;p&gt;Test twig template!&lt;/p&gt;&lt;p&gt;test_var: &#123;&#123; test_var &#125;&#125;&lt;/p&gt; Render arrays #type 方式创建模板 在hook_theme中注册模板 1234# for #type &apos;my_element&apos; =&gt; [ &apos;render element&apos; =&gt; &apos;element&apos;, ], 在controller中调用模板 12&apos;#type&apos; =&gt; &apos;my_element&apos;,&apos;#label&apos; =&gt; $this-&gt;t(&apos;Example Label&apos;), 调用RenderElement子类模板逻辑src/element/MyElement.php 12345678class MyElement extends RenderElement &#123; # 定义element结构 public function getInfo() &#123; &#125; # 设定element值 public static function preRenderMyElement($element) &#123; &#125;&#125; 渲染步骤1中注册的模板templates/my-element.html.twig 12345&lt;div class=&quot;myElement&quot;&gt; &lt;div class=&quot;randomNumber&quot;&gt;Random Number: &#123;&#123; element[&apos;#random_number&apos;] &#125;&#125;&lt;/div&gt; &lt;p&gt;&#123;&#123; element.description &#125;&#125;&lt;/p&gt; &#123;&#123; element.link &#125;&#125;&lt;/div&gt; 修改Render arrays的值 hook_preprocess_HOOK 123function test_twig_preprocess_my_template(&amp;$variables) &#123; $variables[&apos;test_var&apos;] = &apos;Test Value changed by hook_preprocess_HOOK&apos;;&#125; 修改block Render arrayhook_block_view_alter 和 修改entity Render arrayhook_entity_view_alter刚构建完Render arrays时修改 12345function test_block_view_alter(array &amp;$build, \Drupal\Core\Block\BlockPluginInterface $block) &#123; if ($build[&apos;#plugin_id&apos;] == &apos;system_menu_block:menu-title-link&apos;) &#123; $build[&apos;#configuration&apos;][&apos;label&apos;] = &apos;&lt;a href=&quot;/test5&quot;&gt;xxxx&lt;/a&gt;&apos;; &#125;&#125; 参考资料 Creating Elements, Theming Elements, and Managing Front-end LibrariesCreate custom twig templates from custom module]]></content>
+      <tags>
+        <tag>drupal8</tag>
+        <tag>hook_preprocess_HOOK</tag>
+        <tag>Render arrays</tag>
+        <tag>hook_theme</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Twig_Xdebug Module]]></title>
@@ -17,14 +23,18 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[alert theme]]></title>
+    <title><![CDATA[修改模板]]></title>
     <url>%2F2017%2F07%2F06%2Falert-theme%2F</url>
-    <content type="text"><![CDATA[覆盖模板方法及修改主题建议方法 主题系统是怎样运作的 Theme system and render API topic Theming Drupal 8 Render API Theme system overview 覆盖模板方法举例说明：在block上放置一个title=“menu title link”的menu。drupal core contrib theme生成的hook suggestions如下图drupal会按照上图中建议顺序在自定义主题模板目录下查找并使用对应的文件自定义主题目录：docroot\themes\custom\bootstrap_sub\templates Overriding templates 修改主题建议方法覆盖模板方法不会经常使用，更经常用到的方法是修改Theme hook suggestions。比如：node有两个bundle，一个是basic，一个是article，想让basic使用默认的node.html.twig,而想让article使用article.html.twig这种情况可以使用以下3个hook方法来实现 hook_theme_suggestions_HOOKhook_theme_suggestions_alterhook_theme_suggestions_HOOK_alter hook可以是module名也可以是theme名HOOK可以是toolbar,page,region,block,node等共用5个类hook可用，调用顺序如下：123456789my_module_theme_suggestions_node↓my_module_theme_suggestions_alter↓my_theme_theme_suggestions_alter↓my_module_suggestions_node_alter↓my_theme_theme_suggestions_node_alter 后面会覆盖前边尽量使用下边的hook来生成HOOK SUGGESTION Theme hook suggestions 模板有哪些变量?Twig_Xdebug]]></content>
+    <content type="text"><![CDATA[覆盖模板方法及修改主题建议方法 主题系统是怎样运作的 Theme system and render API topic Theming Drupal 8 Render API Theme system overview 覆盖模板方法举例说明：在block上放置一个title=“menu title link”的menu。drupal core contrib theme生成的hook suggestions如下图drupal会按照上图中建议顺序在自定义主题模板目录下查找并使用对应的文件自定义主题目录：docroot\themes\custom\bootstrap_sub\templates Overriding templates 修改主题建议方法覆盖模板方法不会经常使用，更经常用到的方法是修改Theme hook suggestions。比如：node有两个bundle，一个是basic，一个是article，想让basic使用默认的node.html.twig,而想让article使用article.html.twig这种情况可以使用以下3个hook方法来实现 hook_theme_suggestions_HOOKhook_theme_suggestions_alterhook_theme_suggestions_HOOK_alter hook可以是module名也可以是theme名HOOK可以是toolbar,page,region,block,node等共用5个类hook可用，调用顺序如下：123456789my_module_theme_suggestions_node↓my_module_theme_suggestions_alter↓my_theme_theme_suggestions_alter↓my_module_suggestions_node_alter↓my_theme_theme_suggestions_node_alter 后面会覆盖前边尽量使用下边的hook来生成HOOK SUGGESTION Theme hook suggestions 修改模板中使用的变量值123456/*** Implements hook_preprocess_HOOK() for my-template.html.twig.*/function test_twig_preprocess_my_template(&amp;$variables) &#123; $variables[&apos;test_var&apos;] = &apos;Test Value changed by hook_preprocess_HOOK&apos;;&#125; 模板有哪些变量?Twig_Xdebug 修改主题样式Classy themes css selectors 修改属性Using attributes in templatesModifying attributes in a .theme file1234567891011/*** Implements hook_preprocess_HOOK() for menu.html.twig.*/function mytheme_preprocess_menu(&amp;$variables) &#123; // If there is not an existing class array, create an empty array. if (!isset($variables[&apos;attributes&apos;][&apos;class&apos;])) &#123; $variables[&apos;attributes&apos;][&apos;class&apos;] = []; &#125; // Merge with any classes that may have been set by other hook_preprocess_menu invocations $variables[&apos;attributes&apos;][&apos;class&apos;] = array_merge($variables[&apos;attributes&apos;][&apos;class&apos;], [&apos;my-menu&apos;]);&#125; 取得theme setting的值取得admin/appearance/settings/themeName中的值1234&lt;?phpfunction foo_preprocess_node(&amp;$variables) &#123; $variables[&apos;foo_example&apos;] = theme_get_setting(&apos;foo_example&apos;);&#125; 在node.html.twig中使用取得的值1&#123;&#123; foo_example &#125;&#125; Creating advanced theme settings]]></content>
       <tags>
         <tag>drupal8</tag>
         <tag>theme</tag>
         <tag>alert</tag>
         <tag>修改</tag>
+        <tag>hook_theme_suggestions_HOOK</tag>
+        <tag>hook_theme_suggestions_alter</tag>
+        <tag>hook_theme_suggestions_HOOK_alter</tag>
+        <tag>hook_preprocess_HOOK</tag>
       </tags>
   </entry>
   <entry>

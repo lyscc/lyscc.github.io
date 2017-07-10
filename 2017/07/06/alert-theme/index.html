@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="drupal8,theme,alert,修改," />
+  <meta name="keywords" content="drupal8,theme,alert,修改,hook_theme_suggestions_HOOK,hook_theme_suggestions_alter,hook_theme_suggestions_HOOK_alter,hook_preprocess_HOOK," />
 
 
 
@@ -91,16 +91,16 @@
 
 
 <meta name="description" content="覆盖模板方法及修改主题建议方法 主题系统是怎样运作的 Theme system and render API topic Theming Drupal 8 Render API Theme system overview  覆盖模板方法举例说明：在block上放置一个title=“menu title link”的menu。drupal core contrib theme生成的hook sugg">
-<meta name="keywords" content="drupal8,theme,alert,修改">
+<meta name="keywords" content="drupal8,theme,alert,修改,hook_theme_suggestions_HOOK,hook_theme_suggestions_alter,hook_theme_suggestions_HOOK_alter,hook_preprocess_HOOK">
 <meta property="og:type" content="article">
-<meta property="og:title" content="alert theme">
+<meta property="og:title" content="修改模板">
 <meta property="og:url" content="http://yoursite.com/2017/07/06/alert-theme/index.html">
 <meta property="og:site_name" content="Ly&#39;s cheat sheet">
 <meta property="og:description" content="覆盖模板方法及修改主题建议方法 主题系统是怎样运作的 Theme system and render API topic Theming Drupal 8 Render API Theme system overview  覆盖模板方法举例说明：在block上放置一个title=“menu title link”的menu。drupal core contrib theme生成的hook sugg">
 <meta property="og:image" content="http://yoursite.com/2017/07/06/alert-theme/1.png">
-<meta property="og:updated_time" content="2017-07-07T01:42:28.062Z">
+<meta property="og:updated_time" content="2017-07-10T05:58:05.098Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="alert theme">
+<meta name="twitter:title" content="修改模板">
 <meta name="twitter:description" content="覆盖模板方法及修改主题建议方法 主题系统是怎样运作的 Theme system and render API topic Theming Drupal 8 Render API Theme system overview  覆盖模板方法举例说明：在block上放置一个title=“menu title link”的menu。drupal core contrib theme生成的hook sugg">
 <meta name="twitter:image" content="http://yoursite.com/2017/07/06/alert-theme/1.png">
 
@@ -136,7 +136,7 @@
 
 
 
-  <title>alert theme | Ly's cheat sheet</title>
+  <title>修改模板 | Ly's cheat sheet</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">alert theme</h1>
+          <h1 class="post-title" itemprop="name headline">修改模板</h1>
         
 
         <div class="post-meta">
@@ -367,7 +367,13 @@
 <p>hook可以是module名也可以是theme名<br>HOOK可以是toolbar,page,region,block,node等<br>共用5个类hook可用，调用顺序如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">my_module_theme_suggestions_node</div><div class="line">↓</div><div class="line">my_module_theme_suggestions_alter</div><div class="line">↓</div><div class="line">my_theme_theme_suggestions_alter</div><div class="line">↓</div><div class="line">my_module_suggestions_node_alter</div><div class="line">↓</div><div class="line">my_theme_theme_suggestions_node_alter</div></pre></td></tr></table></figure></p>
 <p>后面会覆盖前边<br>尽量使用下边的hook来生成HOOK SUGGESTION</p>
 <p><a href="https://www.drupal.org/docs/8/theming/twig/working-with-twig-templates" target="_blank" rel="external">Theme hook suggestions</a></p>
+<h1 id="修改模板中使用的变量值"><a href="#修改模板中使用的变量值" class="headerlink" title="修改模板中使用的变量值"></a>修改模板中使用的变量值</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">* Implements hook_preprocess_HOOK() for my-template.html.twig.</div><div class="line">*/</div><div class="line">function test_twig_preprocess_my_template(&amp;$variables) &#123;</div><div class="line">    $variables[&apos;test_var&apos;] = &apos;Test Value changed by hook_preprocess_HOOK&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="模板有哪些变量"><a href="#模板有哪些变量" class="headerlink" title="模板有哪些变量?"></a>模板有哪些变量?</h1><p><a href="../../../07/06/Twig-Xdebug-Module/index.html">Twig_Xdebug</a></p>
+<h1 id="修改主题样式"><a href="#修改主题样式" class="headerlink" title="修改主题样式"></a>修改主题样式</h1><p><a href="https://www.drupal.org/docs/8/theming-drupal-8/classy-themes-css-selectors" target="_blank" rel="external">Classy themes css selectors</a></p>
+<h1 id="修改属性"><a href="#修改属性" class="headerlink" title="修改属性"></a>修改属性</h1><p><a href="https://www.drupal.org/docs/8/theming-drupal-8/using-attributes-in-templates" target="_blank" rel="external">Using attributes in templates</a><br><a href="https://www.drupal.org/docs/8/theming-drupal-8/modifying-attributes-in-a-theme-file" target="_blank" rel="external">Modifying attributes in a .theme file</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">* Implements hook_preprocess_HOOK() for menu.html.twig.</div><div class="line">*/</div><div class="line">function mytheme_preprocess_menu(&amp;$variables) &#123;</div><div class="line">  // If there is not an existing class array, create an empty array.</div><div class="line">  if (!isset($variables[&apos;attributes&apos;][&apos;class&apos;])) &#123;</div><div class="line">    $variables[&apos;attributes&apos;][&apos;class&apos;] = [];</div><div class="line">  &#125;</div><div class="line">  // Merge with any classes that may have been set by other hook_preprocess_menu invocations</div><div class="line">  $variables[&apos;attributes&apos;][&apos;class&apos;] = array_merge($variables[&apos;attributes&apos;][&apos;class&apos;], [&apos;my-menu&apos;]);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="取得theme-setting的值"><a href="#取得theme-setting的值" class="headerlink" title="取得theme setting的值"></a>取得theme setting的值</h1><p>取得admin/appearance/settings/themeName中的值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">function foo_preprocess_node(&amp;$variables) &#123;</div><div class="line">  $variables[&apos;foo_example&apos;] = theme_get_setting(&apos;foo_example&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在node.html.twig中使用取得的值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; foo_example &#125;&#125;</div></pre></td></tr></table></figure></p>
+<p><a href="https://www.drupal.org/docs/8/theming-drupal-8/creating-advanced-theme-settings" target="_blank" rel="external">Creating advanced theme settings</a></p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
       
     </div>
@@ -404,6 +410,14 @@
             <a href="/tags/alert/" rel="tag"># alert</a>
           
             <a href="/tags/修改/" rel="tag"># 修改</a>
+          
+            <a href="/tags/hook-theme-suggestions-HOOK/" rel="tag"># hook_theme_suggestions_HOOK</a>
+          
+            <a href="/tags/hook-theme-suggestions-alter/" rel="tag"># hook_theme_suggestions_alter</a>
+          
+            <a href="/tags/hook-theme-suggestions-HOOK-alter/" rel="tag"># hook_theme_suggestions_HOOK_alter</a>
+          
+            <a href="/tags/hook-preprocess-HOOK/" rel="tag"># hook_preprocess_HOOK</a>
           
         </div>
       
@@ -522,7 +536,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">55</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -557,7 +571,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#主题系统是怎样运作的"><span class="nav-number">1.</span> <span class="nav-text">主题系统是怎样运作的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#覆盖模板方法"><span class="nav-number">2.</span> <span class="nav-text">覆盖模板方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改主题建议方法"><span class="nav-number">3.</span> <span class="nav-text">修改主题建议方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模板有哪些变量"><span class="nav-number">4.</span> <span class="nav-text">模板有哪些变量?</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#主题系统是怎样运作的"><span class="nav-number">1.</span> <span class="nav-text">主题系统是怎样运作的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#覆盖模板方法"><span class="nav-number">2.</span> <span class="nav-text">覆盖模板方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改主题建议方法"><span class="nav-number">3.</span> <span class="nav-text">修改主题建议方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改模板中使用的变量值"><span class="nav-number">4.</span> <span class="nav-text">修改模板中使用的变量值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模板有哪些变量"><span class="nav-number">5.</span> <span class="nav-text">模板有哪些变量?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改主题样式"><span class="nav-number">6.</span> <span class="nav-text">修改主题样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改属性"><span class="nav-number">7.</span> <span class="nav-text">修改属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#取得theme-setting的值"><span class="nav-number">8.</span> <span class="nav-text">取得theme setting的值</span></a></li></ol></div>
             
 
           </div>
