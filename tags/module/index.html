@@ -93,7 +93,7 @@
 <meta name="description" content="由drupal8扩展开来">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ly&#39;s cheat sheet">
-<meta property="og:url" content="http://yoursite.com/tags/Module/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/module/index.html">
 <meta property="og:site_name" content="Ly&#39;s cheat sheet">
 <meta property="og:description" content="由drupal8扩展开来">
 <meta name="twitter:card" content="summary">
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/Module/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/module/"/>
 
 
 
 
 
-  <title>标签: Module | Ly's cheat sheet</title>
+  <title>标签: module | Ly's cheat sheet</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -277,7 +277,7 @@
 
   <div id="posts" class="posts-collapse">
     <div class="collection-title">
-      <h1>Module<small>标签</small>
+      <h1>module<small>标签</small>
       </h1>
     </div>
 
@@ -289,9 +289,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/06/23/Display-Suite-Module/" itemprop="url">
+            <a class="post-title-link" href="/2017/07/06/Twig-Xdebug-Module/" itemprop="url">
               
-                <span itemprop="name">Display Suite & Display Suite fields</span>
+                <span itemprop="name">Twig_Xdebug Module</span>
               
             </a>
         
@@ -299,9 +299,37 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-23T13:56:29+08:00"
-              content="2017-06-23" >
-          06-23
+              datetime="2017-07-06T16:31:48+08:00"
+              content="2017-07-06" >
+          07-06
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2017/06/05/Hooks/" itemprop="url">
+              
+                <span itemprop="name">Hooks</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-06-05T13:20:26+08:00"
+              content="2017-06-05" >
+          06-05
         </time>
       </div>
 
@@ -355,7 +383,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-count">37</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -377,7 +405,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">57</span>
+                <span class="site-state-item-count">66</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -861,44 +889,6 @@
 
     // handle and trigger popup window;
     $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
-ick(function(e) {
       e.stopPropagation();
       if (isfetched === false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
